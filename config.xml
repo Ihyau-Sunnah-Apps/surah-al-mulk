@@ -69,7 +69,7 @@
 <gap:plugin name="nl.x-services.plugins.insomnia" version="4.0.1" />
 <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
 <gap:plugin name="org.pushandplay.cordova.apprate" version="1.1.5" />
-
+<gap:plugin name="com.ohh2ahh.plugins.appavailability" version="0.3.1" />
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     

@@ -51,6 +51,65 @@
 			border-top: 1px solid rgba(0,0,0,.1);
 		}
     </style>
+<script>
+if (settings.core.rate_app_counter === 2) {
+    navigator.notification.confirm(
+    'If you enjoy using Surah Al Mulk App, whould you mind taking a moment to rate it? It won't take more than a minute. Thanks for your support!',
+    function(button) {
+        // yes = 1, no = 2, later = 3
+        if (button == '1') {    // Rate Now
+            if (device_ios) {
+                window.open('itms-apps://itunes.apple.com/us/app/domainsicle-domain-name-search/id511364723?ls=1&mt=8'); // or itms://
+            } else if (device_android) {
+                window.open('market://details?id=com.ihyausunnah.surahalkahf');
+            } else if (device_bb){
+                window.open('http://appworld.blackberry.com/webstore/content/<applicationid>');
+            }
+
+            this.core.rate_app = false;
+        } else if (button == '2') { // Later
+            this.core.rate_app_counter = 0;
+        } else if (button == '3') { // No
+            this.core.rate_app = false;
+        }
+    }, 'Rate Surah Al Mulk app', 'Rate Surah Al Mulk App,Remind me later, No Thanks');
+}
+
+</script>
+<script>
+//Twitter checker
+
+// If Mac//
+
+var twitterCheck = function(){
+
+appAvailability.check('twitter://', function(availability) {
+    // availability is either true or false
+    if(availability) { window.open('twitter://user?screen_name=xerxesnoble', '_system', 'location=no');}
+    else{window.open('https://itunes.apple.com/ca/app/twitter/id333903271?mt=8', '_system', 'location=no'); };
+});
+};
+
+//If Android
+
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+
+if(isAndroid) {
+
+twitterCheck = function(){    
+
+appAvailability.check('com.twitter.android', function(availability) {
+    // availability is either true or false
+    if(availability) {window.open('twitter://user?screen_name=xerxesnoble', '_system', 'location=no');}
+    else{window.open('https://play.google.com/store/apps/details?id=com.twitter.android', '_system', 'location=no');};
+});
+};
+};
+</script>
+
+
+
 </head>
 <body>
 
@@ -79,7 +138,7 @@
             <li><a href="mailto:ihyausunnah@yahoo.com?Subject=Surah%20Al%20Kahf%20App" target="_top">Send feedback</a></li>
             
             <li><button onclick="window.open('market://details?id=com.ihyausunnah.surahalkahf')">Rate this App</a></li>
-<li><button onclick="window.open('http://facebook.com/surahalkahfapp', '_system');">Like us on Facebook</button>
+<li><button onclick="twitterCheck()", '_system');">Like us on Facebook</button>
         </ul>
 </div>
 </div>
