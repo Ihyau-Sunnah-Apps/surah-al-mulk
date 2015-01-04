@@ -16,7 +16,20 @@
 <script src="css/insomnia-plugin-demo.js"></script>
 <script type="text/javascript" src="css/index.js"></script>
 
-        
+        <script>
+var insomniaEnabled = false;
+
+function insomniaDemo() {
+  // toggle
+  insomniaEnabled = !insomniaEnabled;
+
+  // call plugin
+  if (insomniaEnabled) {
+    window.plugins.insomnia.keepAwake(function(a) {alert('keepAwake success: ' + a)}, function(b) {alert('keepAwake error: ' + b)});
+  } else {
+    window.plugins.insomnia.allowSleepAgain(function(a) {alert('allowSleepAgain success: ' + a)}, function(b) {alert('allowSleepAgain error: ' + b)});
+  }
+}</script>
 <script src="css/zoom.js"></script>
 
  		<style>
