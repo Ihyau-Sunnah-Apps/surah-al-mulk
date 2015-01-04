@@ -128,6 +128,11 @@ appAvailability.check('com.twitter.android', function(availability) {
 <div data-role="main" class="ui-content">
 <h3>Surah Al-Mulk</h3>
 <a href="android_asset/www/one.html#one" data-role="button" data-theme="e" data-ajax="false">Read Surah Al-Mulk</a>
+<a href="#popupvideo" data-role="button" data-rel="popup" data-theme="e" >Listen and read Surah Al-Mulk(video)</a>
+<a href="#popupMenu2" data-rel="popup" data-role="button" data-theme="e">Translation of Surah Al-Mulk</a>
+<a href="android_asset/www/audio.html"  data-role="button" data-theme="e" data-ajax="false">Commentary videos of Surah Al-Kahf</a>
+<a href="android_asset/www/one.html#thirtytwo"  data-role="button" data-theme="e" data-ajax="false">Benefits of Surah Al Mulk</a>
+<a href="android_asset/www/one.html#twentyeight"  data-role="button" data-theme="e" data-ajax="false">Need Help?</a>
 </div>
 
 <div data-role="panel"  data-theme="a" id="nav-panel" data-position="left" data-display="overlay">
@@ -135,10 +140,31 @@ appAvailability.check('com.twitter.android', function(availability) {
         <ul data-role="listview" data-theme="d" class="nav-search">
             <li><a href="android_asset/www/about.html" data-ajax="false">About</a></li>
             <li><a href="android_asset/www/one.html#twentyseven" data-ajax="false">About the Sunnah Revival</a></li>
-            <li><a href="mailto:ihyausunnah@yahoo.com?Subject=Surah%20Al%20Kahf%20App" target="_top">Send feedback</a></li>
-            
-            <li><button onclick="window.open('market://details?id=com.ihyausunnah.surahalkahf')">Rate this App</a></li>
-<li><button onclick="twitterCheck()">Like us on Facebook</button>
+            <li><a href="mailto:ihyausunnah@yahoo.com?Subject=Surah%20Al%20Mulk%20App" target="_top">Send feedback</a></li>
+             <li><a href="android_asset/www/one.html#twentyeight" data-ajax="false">Need Help</a></li>
+            <li><button onclick="window.open('market://details?id=com.ihyausunnah.surahalmulk')">Rate this App</a></li>
+<li><button onclick="window.open('market://developer?id=SMS', '_system');">More Apps</button>
         </ul>
 </div>
+<div data-role="popup" id="popupMenu2" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+            <li><a href="android_asset/www/one.html#thirteen" data-ajax="false">English(Default)</a></li>
+            <li><a href="android_asset/www/trans.html#sixtyone" data-ajax="false">Arabic Muyassar</a></li>
+	    <li><a href="android_asset/www/trans.html#thirtyseven" data-ajax="false">French</a></li>
+            <li><a href="android_asset/www/trans.html#twentyfive" data-ajax="false">Indonesian</a></li>
+ 	    <li><a href="android_asset/www/trans.html#fortynine" data-ajax="false">Malay</a></li>
+	    <li><a href="android_asset/www/trans.html#seventythree" data-ajax="false">Norwegian</a></li>
+            <li><a href="android_asset/www/trans.html#one" data-ajax="false">Swahili</a></li>
+            <li><a href="android_asset/www/trans.html#thirteen" data-ajax="false">Somali</a></li>
+            
+        </ul>
+</div>
+
+
+<div data-role="popup" id="popupvideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
+
+    <iframe title="YouTube video player" src="http://www.youtube.com/embed/7Qw2WhDykKI" width="200" height="298" seamless></iframe>
+
+</div>
+
 </div>
