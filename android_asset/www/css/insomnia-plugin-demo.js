@@ -1,9 +1,4 @@
-﻿
-
-
-
-
-"use strict";
+﻿"use strict";
 
 var insomniaEnabled = false;
 
