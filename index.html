@@ -51,11 +51,6 @@
 			border-top: 1px solid rgba(0,0,0,.1);
 		}
     </style>
-<script>cordova.plugins.notification.local.schedule({
-    text: "Wake up!",
-    sound: "file://sounds/alert.caf",
-    every: 1 // every 30 minutes
-});</script>
 
 
 </head>
@@ -70,42 +65,45 @@
 <a href="#nav-panel" data-icon="bars" data-role="button" data-inline="true" data-theme="e"   >Menu</a>
 
 <h3><strong>Surah Al Mulk </strong></h3>
-         <button onclick="window.plugins.socialsharing.share('Message and link', null, null, 'http://www.x-services.nl')">message and link</button>
+         <button onclick="window.plugins.socialsharing.share('Have a look at Surah al Mulk App', null, null, 'https://play.google.com/store/apps/details?id=com.ihyausunnah.surahalmulk')">Share App</button>
 
 </div>
 <div data-role="main" class="ui-content">
 <h3>Surah Al-Mulk</h3>
-<a href="android_asset/www/one.html#one" data-role="button" data-theme="e" data-ajax="false">Read Surah Al-Mulk</a>
+<a href="one.html#one" data-role="button" data-theme="e" data-ajax="false">Read Surah Al-Mulk</a>
 <a href="#popupvideo" data-role="button" data-rel="popup" data-theme="e" >Listen and read Surah Al-Mulk(video)</a>
 <a href="#popupMenu2" data-rel="popup" data-role="button" data-theme="e">Translation of Surah Al-Mulk</a>
-<a href="android_asset/www/audio.html"  data-role="button" data-theme="e" data-ajax="false">Commentary videos of Surah Al-Kahf</a>
-<a href="android_asset/www/one.html#thirtytwo"  data-role="button" data-theme="e" data-ajax="false">Benefits of Surah Al Mulk</a>
-<a href="android_asset/www/one.html#twentyeight"  data-role="button" data-theme="e" data-ajax="false">Need Help?</a>
+<a href="one.html#thirtythree"  data-role="button" data-theme="e" data-ajax="false">Commentary videos of Surah Al-Kahf</a>
+<a href="one.html#fifty"  data-role="button" data-theme="e" data-ajax="false">Benefits of Surah Al Mulk</a>
+<a href="one.html#twentyeight"  data-role="button" data-theme="e" data-ajax="false">Need Help?</a>
 </div>
 
 <div data-role="panel"  data-theme="a" id="nav-panel" data-position="left" data-display="overlay">
 
         <ul data-role="listview" data-theme="d" class="nav-search">
-            <li><a href="android_asset/www/about.html" data-ajax="false">About</a></li>
-            <li><a href="android_asset/www/one.html#twentyseven" data-ajax="false">About the Sunnah Revival</a></li>
-            <li><a href="mailto:ihyausunnah@yahoo.com?Subject=Surah%20Al%20Mulk%20App" target="_top">Send feedback</a></li>
-             <li><a href="android_asset/www/one.html#twentyeight" data-ajax="false">Need Help</a></li>
+	    <li><a href="index.html" data-ajax="false">Home</a></li>
+            <li><a href="one.html#thirtyfour" data-ajax="false">About</a></li>
+            <li><a href="one.html#twentyseven" data-ajax="false">About the Sunnah Revival</a></li>
+            <li><a href="mailto:thesunnahrevival.tsr@gmail.com?Subject=Surah%20Al%20Mulk%20App" target="_top">Send feedback</a></li>
+             <li><a href="one.html#twentyeight" data-ajax="false">Need Help</a></li>
             <li><button onclick="window.open('market://details?id=com.ihyausunnah.surahalmulk')">Rate this App</a></li>
-<li><button onclick="window.open('market://developer?id=TSR%20Apps', '_system');">More Apps</button>
+<li><button onclick="window.open('one.html#fiftythree');">More Apps</button>
         </ul>
 </div>
 <div data-role="popup" id="popupMenu2" data-theme="d">
         <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
-            <li><a href="android_asset/www/one.html#thirteen" data-ajax="false">English(Default)</a></li>
-            <li><a href="android_asset/www/trans.html#sixtyone" data-ajax="false">Arabic Muyassar</a></li>
-	    <li><a href="android_asset/www/trans.html#thirtyseven" data-ajax="false">French</a></li>
-            <li><a href="android_asset/www/trans.html#twentyfive" data-ajax="false">Indonesian</a></li>
- 	    <li><a href="android_asset/www/trans.html#fortynine" data-ajax="false">Malay</a></li>
-	    <li><a href="android_asset/www/trans.html#seventythree" data-ajax="false">Norwegian</a></li>
-            <li><a href="android_asset/www/trans.html#one" data-ajax="false">Swahili</a></li>
-            <li><a href="android_asset/www/trans.html#thirteen" data-ajax="false">Somali</a></li>
-            
-        </ul>
+            <li><a href="one.html#thirteen" data-ajax="false">English(Default)</a></li>
+            <li><a href="trans.html#sixtyone" data-ajax="false">Arabic Muyassar</a></li>
+	    <li><a href="trans.html#thirtyseven" data-ajax="false">French</a></li>
+            <li><a href="trans.html#twentyfive" data-ajax="false">Indonesian</a></li>
+ 	    <li><a href="trans.html#fortynine" data-ajax="false">Malay</a></li>
+	    <li><a href="trans.html#seventythree" data-ajax="false">Norwegian</a></li>
+            <li><a href="trans.html#one" data-ajax="false">Swahili</a></li>
+            <li><a href="trans.html#thirteen" data-ajax="false">Somali</a></li>
+            <li><a href="trans.html#eightyfive" data-ajax="false">Spanish</a></li>
+            <li><a href="trans.html#ninetyseven" data-ajax="false">German</a></li>
+            <li><a href="trans.html#onehundrednine" data-ajax="false">Russian</a></li>
+</ul>
 </div>
 
 
