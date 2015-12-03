@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Surah Al Kahf</title>
+	<title>Surah Al Mulk</title>
 	<link rel="stylesheet"  href="android_asset/www/css/jquery.mobile-1.3.0.css">
 	<link rel="stylesheet" href="android_asset/www/css/jqm-demos.css">
 	<link rel="stylesheet" href="android_asset/www/css/swipe-page.css">
@@ -11,6 +11,7 @@
 	<script src="android_asset/www/css/jquery-1.7.1.min.js"></script>
 	
 	<script src="android_asset/www/css/jquery.mobile-1.3.0.js"></script>
+
 	<script src="android_asset/www/css/swipe-page.js"></script>
         <script src="android_asset/www/css/socialsharing.js"></script> <script type="text/javascript" 
 <script type="text/javascript" src="android_asset/www/css/buttons.js"></script>
@@ -61,14 +62,20 @@
 
 
 
-<div data-theme="c" data-role="header" data-position="fixed">
+<div data-theme="b" data-role="header" data-position="fixed">
 <a href="#nav-panel" data-icon="bars" data-role="button" data-inline="true" data-theme="e"   >Menu</a>
 
-<h3><strong>Surah Al Mulk </strong></h3>
-         <button onclick="window.plugins.socialsharing.share('Have a look at Surah al Mulk App', null, null, 'https://play.google.com/store/apps/details?id=com.ihyausunnah.surahalmulk')">Share App</button>
+<h3><strong>Surah Al Mulk and Al-Sajdah </strong></h3>
+         <button onclick="window.plugins.socialsharing.share('Have a look at Surah al Mulk and Al-Sajdah App', null, null, 'https://play.google.com/store/apps/details?id=com.ihyausunnah.surahalmulk')" data-theme="e" >Share App</button>
 
 </div>
-<div data-role="main" class="ui-content">
+<div data-role="navbar" data-theme="b" >
+    <ul>
+        <li><a href="#" class="ui-btn-active"  data-theme="e" >Surah Al Mulk</a></li>
+        <li><a href="#two"data-theme="e" >Al-Sajdah</a></li>
+    </ul>
+</div><!-- /navbar -->
+<div data-role="main" class="ui-content" id="mulk">
 <h3>Surah Al-Mulk</h3>
 <a href="one.html#one" data-role="button" data-theme="e" data-ajax="false">Read Surah Al-Mulk</a>
 <a href="#popupvideo" data-role="button" data-rel="popup" data-theme="e" >Listen and read Surah Al-Mulk(video)</a>
@@ -121,5 +128,43 @@
     <iframe title="YouTube video player" src="http://www.youtube.com/embed/7Qw2WhDykKI" width="200" height="298" seamless></iframe>
 
 </div>
+</div>
+
+<div data-role="page" id="two" class="demo-page" data-theme="a" data-next="#two">
+
+
+
+<div data-theme="b" data-role="header" data-position="fixed">
+<a href="#nav-panel" data-icon="bars" data-role="button" data-inline="true" data-theme="e"   >Menu</a>
+
+<h3><strong>Surah Al Mulk and Al-Sajdah </strong></h3>
+         <button onclick="window.plugins.socialsharing.share('Have a look at Surah al Mulk and Al-Sajdah App', null, null, 'https://play.google.com/store/apps/details?id=com.ihyausunnah.surahalmulk')" data-theme="e" >Share App</button>
+
+</div>
+<div data-role="navbar" data-theme="b" >
+    <ul>
+        <li><a href="#one" class="ui-btn-active"  data-theme="e" >Surah Al Mulk</a></li>
+        <li><a href="#"data-theme="e" >Al-Sajdah</a></li>
+    </ul>
+</div><!-- /navbar -->
+<div data-role="main" class="ui-content" id="sajdah">
+<h3>Surah Al-Sajdah</h3>
+<a href="one.html#four" data-role="button" data-theme="e" data-ajax="false">Read Surah Al-Sajdah</a>
+<a href="#popupvideo" data-role="button" data-rel="popup" data-theme="e" >Listen and read Surah Al-Mulk(video)</a>
+<a href="#popupMenu2" data-rel="popup" data-role="button" data-theme="e">Translation of Surah Al-Mulk</a>
+<a href="one.html#thirtythree"  data-role="button" data-theme="e" data-ajax="false">Commentary videos of Surah Al-Mulk</a>
+<a href="one.html#fifty"  data-role="button" data-theme="e" data-ajax="false">Benefits of Surah Al Mulk</a>
+<a href="one.html#twentyeight"  data-role="button" data-theme="e" data-ajax="false">Need Help?</a>
+<h3><strong>More</strong></h3>
+<h5><strong>Hint Use this button to remind a friend to recite Surah Al Mulk </strong></p><a href="#popupInfo" data-rel="popup" data-role="button" class="ui-icon-alt" data-inline="true" data-transition="pop" data-icon="info" data-theme="e" data-iconpos="notext">Why Remind</a> </strong></h5>
+<div data-role="popup" id="popupInfo" class="ui-content" data-theme="e" style="max-width:350px;">
+  <h3>Why Remind</h3><p><strong>Abu Mas'ud Al-Ansari (r.a.) narrated that Allah’s Messenger (s.a.w.s.) said, “…One who guides to something good has a reward similar to that of its doer.” (Muslim, Vol. 4, Hadeeth 4665) </strong></p>
+</div>
+<button onclick="window.plugins.socialsharing.share('I am reminding you to read Surah Al Mulk its the Sunnah of our beloved Prophet Muhammad (SAW).It was narrated that ‘Abd-Allaah ibn Mas’ood said: Whoever readsTabaarak allaahi bi yadihi’l-mulk[i.e., Soorat al-Mulk] every night, Allaah will protect him from the torment of the grave. At the time of the Messenger of Allaah (peaceand blessings of Allaah be upon him) we used to call ital- maani’ah(that which protects). In the Book of Allaah it is a soorah which, whoever recites it every night has done very well. Narrated by al-Nasaa’i, 6/179;Sent from Surah Al Mulk android App', null, null, 'https://play.google.com/store/apps/details?id=com.ihyausunnah.surahalmulk')" data-theme="e">Remind A friend</button>
+<a href="https://www.facebook.com/TSRapps"  class="show-page-loading-msg" data-textonly="true" data-textvisible="true" data-msgtext="As it loads say astaghfirullah"  data-role="button" data-theme="e" >Like us on Facebook</a>
+<a href="https://www.twitter.com/TSRapps"  class="show-page-loading-msg" data-textonly="true" data-textvisible="true" data-msgtext="As it loads say Allah Akbar"  data-role="button" data-theme="e" >Follow us on Twitter</a>
+<h2><strong>DEVELOPED BY TSR APPS</strong></h2>
+</div>
+
 
 </div>
