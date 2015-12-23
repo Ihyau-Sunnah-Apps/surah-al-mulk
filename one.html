@@ -1,22 +1,35 @@
 ﻿<!DOCTYPE html>
+
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-	<title>Surah Al Mulk</title>
-	<link rel="stylesheet"  href="android_asset/www/css/jquery.mobile-1.3.0.css">
-	<link rel="stylesheet" href="android_asset/www/css/jqm-demos.css">
-	<link rel="stylesheet" href="android_asset/www/css/swipe-page.css">
-	<link rel="shortcut icon" href="../../favicon.ico">
-	<script src="android_asset/www/css/jquery-1.7.1.min.js"></script>
-	<script src="android_asset/www/css/jquery.mobile.demos.js"></script>
-	<script src="android_asset/www/css/jquery.mobile-1.3.0.js"></script>
-	<script src="android_asset/www/css/swipe-page.js"></script>
-<script type="text/javascript" src="phonegap.js"></script>
-<script src="android_asset/www/css/insomnia-plugin-demo.js"></script>
+	
+<meta charset="utf-8">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<title>Surah Al Mulk</title>
+	
+<link rel="stylesheet"  href="android_asset/www/css/jquery.mobile-1.3.0.css">
+	
+<link rel="stylesheet" href="android_asset/www/css/jqm-demos.css">
+	
+<link rel="stylesheet" href="android_asset/www/css/swipe-page.css">
+	
+<link rel="shortcut icon" href="../../favicon.ico">
+	
+<script src="android_asset/www/css/jquery-1.7.1.min.js"></script>
+	
+	
+<script src="android_asset/www/css/jquery.mobile-1.3.0.js"></script>
+<script src="android_asset/www/css/socialsharing.js"></script> 
+<script type="text/javascript" src="android_asset/www/css/buttons.js"></script>
+<script type="text/javascript" src="cordova.js"></script><style>
+
 <script type="text/javascript" src="android_asset/www/css/index.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
- 		<style>
+<script type="text/javascript"  src="phonegap.js"></script>
+<script type="text/javascript"  src="cordova_plugins.js"></script>
+       <style>
 * {
   padding: 0;
   margin: 0;
@@ -32,6 +45,7 @@
 </style>
 
 
+
 </head>
 <body>
 <div data-role="page" id="one" class="demo-page" data-dom-cache="true" data-theme="a" data-next="#two" data-prev="#twelve">
@@ -41,7 +55,7 @@
 <div data-theme="c" data-role="header" data-fullscreen="true" data-position="fixed">
 <a href="index.html" data-role="button" data-theme="e" data-inline="true" data-ajax="false">Home</a>
 <h3><strong>Surah Al Mulk pg562</strong></h3>
-            <a href="#thirteen" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
+            <a href="#popupMenu2" data-role="button" data-rel="popup"  data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
 </div>
 
 
@@ -52,9 +66,27 @@
 <div data-role="controlgroup" class="control ui-btn-left" data-type="horizontal" data-mini="true">
         	<a  href="#two" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-theme="c" data-inline="true">Next</a>
                 <a  href="#" data-role="button" data-icon="arrow-r" data-iconpos="notext" data-theme="c" data-inline="true">Previous</a>
+				<button onclick="window.plugins.insomnia.keepAwake()">Screen stay on</button>
+				<button onclick="window.plugins.socialsharing.share('I am reminding you to read Surah Al Mulk and Al Sajdah its the Sunnah of our beloved Prophet Muhammad (SAW).\n\nIt was narrated that ‘Abd-Allaah ibn Mas’ood said: \n\nWhoever readsTabaarak allaahi bi yadihi’l-mulk[i.e., Soorat al-Mulk] every night, Allaah will protect him from the torment of the grave. At the time of the Messenger of Allaah (peaceand blessings of Allaah be upon him) we used to call ital- maani’ah(that which protects). In the Book of Allaah it is a soorah which, whoever recites it every night has done very well. \n\nNarrated by al-Nasaa’i, 6/179;\n\nIt was narrated from Jaabir, that the Prophet (peace and blessings of Allaah be upon him) never used to sleep until he had recitedAlif-laam-meem tanzeel[al-Sajdah] andTabaarak alladhi bi yadihi’l-mulk[al-Mulk].\n\n Narrated by al-Tirmidhi, 2892; Ahmad, 14249. Al-Albaani said inSaheeh al-Tirmidhi(3/6) that this hadeeth is saheeh.\n\nSent from Surah Al Mulk android App https://play.google.com/store/apps/details?id=com.ihyausunnah.surahalmulk\n\nDont have an android phone read online', null, null, 'surahmulk.github.io')" data-theme="e">Remind A friend</button>
 </div>
 
 </div>
+<div data-role="popup" id="popupMenu2" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+            <li><a href="one.html#thirteen" data-ajax="false">English(Default)</a></li>
+            <li><a href="trans.html#sixtyone" data-ajax="false">Arabic Muyassar</a></li>
+	    <li><a href="trans.html#thirtyseven" data-ajax="false">French</a></li>
+            <li><a href="trans.html#twentyfive" data-ajax="false">Indonesian</a></li>
+ 	    <li><a href="trans.html#fortynine" data-ajax="false">Malay</a></li>
+	    <li><a href="trans.html#seventythree" data-ajax="false">Norwegian</a></li>
+            <li><a href="trans.html#one" data-ajax="false">Swahili</a></li>
+            <li><a href="trans.html#thirteen" data-ajax="false">Somali</a></li>
+            <li><a href="trans.html#eightyfive" data-ajax="false">Spanish</a></li>
+            <li><a href="trans.html#ninetyseven" data-ajax="false">German</a></li>
+            <li><a href="trans.html#onehundrednine" data-ajax="false">Russian</a></li>
+</ul>
+</div>
+
 
 </div>
 
@@ -66,7 +98,7 @@
 <div data-theme="c" data-role="header" data-fullscreen="true" data-position="fixed">
 <a href="index.html" data-role="button" data-theme="e" data-inline="true" data-ajax="false">Home</a>
 <h3><strong>Surah Al Mulk pg563</strong></h3>
-            <a href="#fourteen" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
+            <a href="#popupMenu2" data-role="button" data-rel="popup"  data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
 
 </div>
 
@@ -85,6 +117,22 @@
 </div>
 
 </div>
+<div data-role="popup" id="popupMenu2" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+            <li><a href="one.html#fourteen" data-ajax="false">English(Default)</a></li>
+            <li><a href="trans.html#sixtytwo" data-ajax="false">Arabic Muyassar</a></li>
+	    <li><a href="trans.html#thirtyeight" data-ajax="false">French</a></li>
+            <li><a href="trans.html#twentysix" data-ajax="false">Indonesian</a></li>
+ 	    <li><a href="trans.html#fifty" data-ajax="false">Malay</a></li>
+	    <li><a href="trans.html#seventyfour" data-ajax="false">Norwegian</a></li>
+            <li><a href="trans.html#two" data-ajax="false">Swahili</a></li>
+            <li><a href="trans.html#fourteen" data-ajax="false">Somali</a></li>
+            <li><a href="trans.html#eightysix" data-ajax="false">Spanish</a></li>
+            <li><a href="trans.html#ninetyeight" data-ajax="false">German</a></li>
+            <li><a href="trans.html#onehundredten" data-ajax="false">Russian</a></li>
+</ul>
+</div>
+
 
 </div>
 </div>
@@ -94,7 +142,7 @@
 <div data-theme="c" data-role="header" data-fullscreen="true" data-position="fixed">
 <a href="index.html" data-role="button" data-theme="e" data-inline="true" data-ajax="false">Home</a>
 <h3><strong>Surah Al Mulk pg564</strong></h3>
-            <a href="#fifteen" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
+            <a href="#popupMenu2" data-role="button" data-rel="popup"  data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
 </div>
 
 <div data-role="main" class="ui-content">
@@ -115,6 +163,25 @@
 </div>
 
 </div>
+<div data-role="popup" id="popupMenu2" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+            <li><a href="one.html#fifteen" data-ajax="false">English(Default)</a></li>
+            <li><a href="trans.html#sixtythree" data-ajax="false">Arabic Muyassar</a></li>
+	    <li><a href="trans.html#thirtynine" data-ajax="false">French</a></li>
+            <li><a href="trans.html#twentyseven" data-ajax="false">Indonesian</a></li>
+ 	    <li><a href="trans.html#fiftyone" data-ajax="false">Malay</a></li>
+	    <li><a href="trans.html#seventyfive" data-ajax="false">Norwegian</a></li>
+            <li><a href="trans.html#three" data-ajax="false">Swahili</a></li>
+            <li><a href="trans.html#fifteen" data-ajax="false">Somali</a></li>
+            <li><a href="trans.html#eightyseven" data-ajax="false">Spanish</a></li>
+            <li><a href="trans.html#ninetynine" data-ajax="false">German</a></li>
+            <li><a href="trans.html#onehundredeleven" data-ajax="false">Russian</a></li>
+</ul>
+</div>
+
+
+
+
 </div>
 
 <div data-role="page" id="four" class="demo-page" data-theme="a" data-next="#five" data-prev="#">
@@ -122,7 +189,7 @@
 <div data-theme="c" data-role="header" data-fullscreen="true" data-position="fixed">
 <a href="index.html" data-role="button" data-theme="e" data-inline="true" data-ajax="false">Home</a>
 <h3><strong>Surah Al Sajdah pg415</strong></h3>
-            <a href="#sixteen" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
+            <a href="#popupMenu2015" data-rel="popup" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
 </div>
 
 <div data-role="main" class="ui-content">
@@ -143,6 +210,21 @@
 </div>
 
 </div>
+<div data-role="popup" id="popupMenu2015" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+             <li><a href="one.html#sixteen" data-ajax="false">English</a></li>
+            <li><a href="trans.html#sixtyfour" data-ajax="false" >Arabic Muyassar</a></li>
+	    <li><a href="trans.html#forty" data-ajax="false">French</a></li>
+            <li><a href="trans.html#twentyeight" data-ajax="false" >Indonesian</a></li>
+	    <li><a href="trans.html#fiftytwo" data-ajax="false" >Malay</a></li>
+	    <li><a href="trans.html#seventysix" data-ajax="false" >Norwegian</a></li>
+           <li><a href="trans.html#four" data-ajax="false" >Swahili</a></li>
+           <li><a href="trans.html#sixteen" data-ajax="false" >Somali</a></li>
+ <li><a href="trans.html#eightyeight" data-ajax="false" >Spanish</a></li>
+           <li><a href="trans.html#onehundred" data-ajax="false"  >German</a></li>
+           <li><a href="trans.html#onehundredtwelve"data-ajax="false"  >Russian</a></li>
+</ul>
+</div>
 </div>
 
 
@@ -151,7 +233,7 @@
 <div data-theme="c" data-role="header" data-fullscreen="true" data-position="fixed">
 <a href="index.html" data-role="button" data-theme="e" data-inline="true" data-ajax="false">Home</a>
 <h3><strong>Surah Al Sajdah pg416</strong></h3>
-            <a href="#seventeen" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
+            <a href="#popupMenu2015" data-rel="popup"  data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
 </div>
 
 <div data-role="main" class="ui-content">
@@ -172,6 +254,21 @@
 </div>
 
 </div>
+<div data-role="popup" id="popupMenu2015" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+             <li><a href="one.html#sixteen" data-ajax="false">English</a></li>
+            <li><a href="trans.html#sixtyfour" data-ajax="false" >Arabic Muyassar</a></li>
+	    <li><a href="trans.html#forty" data-ajax="false">French</a></li>
+            <li><a href="trans.html#twentyeight" data-ajax="false" >Indonesian</a></li>
+	    <li><a href="trans.html#fiftytwo" data-ajax="false" >Malay</a></li>
+	    <li><a href="trans.html#seventysix" data-ajax="false" >Norwegian</a></li>
+           <li><a href="trans.html#four" data-ajax="false" >Swahili</a></li>
+           <li><a href="trans.html#sixteen" data-ajax="false" >Somali</a></li>
+ <li><a href="trans.html#eightyeight" data-ajax="false" >Spanish</a></li>
+           <li><a href="trans.html#onehundred" data-ajax="false"  >German</a></li>
+           <li><a href="trans.html#onehundredtwelve"data-ajax="false"  >Russian</a></li>
+</ul>
+</div>
 </div>
 
 <div data-role="page" id="six" class="demo-page" data-theme="a" data-next="#" data-prev="#five">
@@ -179,7 +276,7 @@
 <div data-theme="c" data-role="header" data-fullscreen="true" data-position="fixed">
 <a href="index.html" data-role="button" data-theme="e" data-inline="true" data-ajax="false">Home</a>
 <h3><strong>Surah Al Sajdah pg417</strong></h3>
-            <a href="#eighteen" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
+            <a href="#popupMenu2015" data-rel="popup" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="e" data-inline="true">Bars</a>
 </div>
 
 <div data-role="main" class="ui-content">
@@ -199,6 +296,21 @@
 
 </div>
 
+</div>
+<div data-role="popup" id="popupMenu2015" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+             <li><a href="one.html#sixteen" data-ajax="false">English</a></li>
+            <li><a href="trans.html#sixtyfour" data-ajax="false" >Arabic Muyassar</a></li>
+	    <li><a href="trans.html#forty" data-ajax="false">French</a></li>
+            <li><a href="trans.html#twentyeight" data-ajax="false" >Indonesian</a></li>
+	    <li><a href="trans.html#fiftytwo" data-ajax="false" >Malay</a></li>
+	    <li><a href="trans.html#seventysix" data-ajax="false" >Norwegian</a></li>
+           <li><a href="trans.html#four" data-ajax="false" >Swahili</a></li>
+           <li><a href="trans.html#sixteen" data-ajax="false" >Somali</a></li>
+ <li><a href="trans.html#eightyeight" data-ajax="false" >Spanish</a></li>
+           <li><a href="trans.html#onehundred" data-ajax="false"  >German</a></li>
+           <li><a href="trans.html#onehundredtwelve"data-ajax="false"  >Russian</a></li>
+</ul>
 </div>
 </div>
 
@@ -443,7 +555,7 @@
 	
 	
 	
-<a href="#one" data-role="button" data-theme="e" data-inline="true">Back</a>
+<a href="#four" data-role="button" data-theme="e" data-inline="true">Back</a>
 
 
 </div>
@@ -460,9 +572,9 @@
 	    <li><a href="trans.html#seventysix" data-ajax="false" >Norwegian</a></li>
            <li><a href="trans.html#four" data-ajax="false" >Swahili</a></li>
            <li><a href="trans.html#sixteen" data-ajax="false" >Somali</a></li>
- <li><a href="trans.html#eightyeight" >Spanish</a></li>
-           <li><a href="trans.html#onehundred" >German</a></li>
-           <li><a href="trans.html#onehundredtwelve" >Russian</a></li>
+ <li><a href="trans.html#eightyeight" data-ajax="false" >Spanish</a></li>
+           <li><a href="trans.html#onehundred"data-ajax="false"  >German</a></li>
+           <li><a href="trans.html#onehundredtwelve" data-ajax="false"  >Russian</a></li>
 
 </ul>
 
@@ -507,7 +619,7 @@
 	<li><strong>32|20|But as for those who defiantly disobeyed, their refuge is the Fire. Every time they wish to emerge from it, they will be returned to it while it is said to them, "Taste the punishment of the Fire which you used to deny."</strong></li>
 	
 	
-<a href="#one" data-role="button" data-theme="e" data-inline="true">Back</a>
+<a href="#five" data-role="button" data-theme="e" data-inline="true">Back</a>
 
 
 </div>
@@ -524,9 +636,9 @@
 	    <li><a href="trans.html#seventyseven" data-ajax="false" >Norwegian</a></li>
            <li><a href="trans.html#five" data-ajax="false" >Swahili</a></li>
            <li><a href="trans.html#seventeen" data-ajax="false" >Somali</a></li>
- <li><a href="trans.html#eightynine" >Spanish</a></li>
-           <li><a href="trans.html#onehundredone" >German</a></li>
-           <li><a href="trans.html#onehundredthirteen" >Russian</a></li>
+ <li><a href="trans.html#eightynine" data-ajax="false"  >Spanish</a></li>
+           <li><a href="trans.html#onehundredone" data-ajax="false" >German</a></li>
+           <li><a href="trans.html#onehundredthirteen"  data-ajax="false">Russian</a></li>
 
 </ul>
 
@@ -574,7 +686,7 @@
 	<img class="center fit"  src="images/32_30.png" alt="32:30"/>
 	<li><strong>32|30|So turn away from them and wait. Indeed, they are waiting.</strong></li>
 	
-<a href="#one" data-role="button" data-theme="e" data-inline="true">Back</a>
+<a href="#six" data-role="button" data-theme="e" data-inline="true">Back</a>
 
 
 </div>
@@ -592,8 +704,8 @@
            <li><a href="trans.html#six" data-ajax="false" >Swahili</a></li>
            <li><a href="trans.html#eighteen" data-ajax="false" >Somali</a></li>
  <li><a href="trans.html#ninety" >Spanish</a></li>
-           <li><a href="trans.html#onehundredtwo" >German</a></li>
-           <li><a href="trans.html#onehundredfourteen" >Russian</a></li>
+           <li><a href="trans.html#onehundredtwo" data-ajax="false"  >German</a></li>
+           <li><a href="trans.html#onehundredfourteen" data-ajax="false" >Russian</a></li>
 
 </ul>
 
@@ -825,6 +937,25 @@
 
 
 </div></div>
+<div data-role="page" id="sixty" class="demo-page" data-theme="c" >
+
+
+<div data-role="main" class="ui-content">
+<div data-theme="e" data-role="header" data-position="fixed">
+<a href="index.html#two" data-role="button" data-inline="true" data-theme="e" data-ajax="false">Home</a>
+<h3><strong>Benefits of Surah Al Sajdah</strong></h3>
+             <button onclick="window.open('market://details?id=com.ihyausunnah.surahalkahf')">Rate this App</a>
+</div>
+<br></br>
+<h3><strong>Benefits of Reciting Surah Al Sajdah</strong></h3>
+<br></br>
+<p><strong>1.It is Sunnah to recite it every night before sleeping</strong></p>
+
+<p></p><strong>It was narrated from Jaabir, that the Prophet (peace and blessings of Allaah be upon him) never used to sleep until he had recitedAlif-laam-meem tanzeel[al-Sajdah] andTabaarak alladhi bi yadihi’l-mulk[al-Mulk]. Narrated by al-Tirmidhi, 2892; Ahmad, 14249. Al-Albaani said inSaheeh al-Tirmidhi(3/6) that this hadeeth is saheeh. </strong></p>
+<br></br>
+<h3></h3><strong><span style="text-decoration: underline;">Other virtues</span></strong></h3>
+
+<p><strong>Al-Bukhaari (891) and Muslim (880) narrated that Abu Hurayrah (may Allaah be pleased with him) said: The Prophet (peace and blessings of Allaah be upon him) used to recite in Fajr prayer on Friday: “Alif‑Laam‑Meem. The revelation…” [al-Sajdah 32] and “Has there not been over man a period of time…” [al-Insaan 76] . </strong></p>
 
 
 <div data-role="page" id="thirtyfour"data-theme="c">
@@ -866,10 +997,9 @@ Contact Us Immediately</a>
 <div id='shareThisShareEgg' class='shareEgg'></div>
 <script type='text/javascript'>stlib.shareEgg.createEgg('shareThisShareEgg', ['facebook','twitter','googleplus','email'], {title:'Surah Al Mulk Android App',url:'https://play.google.com/store/apps/developer?id=TSR%20Apps',theme:'shareegg'});</script>
 
-<p><strong>©2015 TSR Apps</strong></p>
+<p><strong>©2015-2016 TSR Apps</strong></p>
 
 </div></div></div>
-
 
 
 </body>
