@@ -47,7 +47,7 @@ var app = {
 		text: "Tap here to read now",
 	
 		firstAt: tomorrow_at_6_am,
-		every: 1440 // "minute", "hour", "week", "month", "year"
+		
 		
 		});	
 		
