@@ -80,7 +80,7 @@
 <div data-role="main" class="ui-content" id="mulk">
 Tap here <a data-role="button" href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20Mulk%20App&body=---Please%20Write%20Your%20Feedback%20below%20in%20English---%0A%0ASent%20from%20Version%201.0.5" target="_top"  class="ui-icon-alt"  data-icon="alert" data-inline="true" data-theme="e" data-iconpos="notext" >Contact Us</a>to report a problem 
 
-<a href="one.html#one" data-role="button" data-theme="e" id='btn_hide' data-ajax="false">Read Surah Al-Mulk</a>
+<a href="one.html#one" data-role="button" data-theme="e" id='btn_hide' id='btn_prepare' data-ajax="false">Read Surah Al-Mulk</a>
 <a href="#popupvideo" data-role="button" data-rel="popup" data-theme="e" >Listen and read Surah Al-Mulk(video)</a>
 
 <a href="ads.html#thirtythree"  data-role="button" data-theme="e" data-ajax="false">Commentary videos of Surah Al-Mulk</a>
@@ -176,7 +176,7 @@ Contact Us Immediately</a>
 <div data-role="main" class="ui-content" id="sajdah">
 Tap here <a data-role="button" href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20Mulk%20App&body=---Please%20Write%20Your%20Feedback%20below%20in%20English---%0A%0ASent%20from%20Version%201.0.5" target="_top"  class="ui-icon-alt"  data-icon="alert" data-inline="true" data-theme="e" data-iconpos="notext" >Contact Us</a>to report a problem 
 
-<a href="one.html#four" data-role="button" data-theme="e" id='btn_hide' data-ajax="false">Read Surah Al-Sajdah</a>
+<a href="one.html#four" data-role="button" data-theme="e" id='btn_hidee'  data-ajax="false">Read Surah Al-Sajdah</a>
 <a href="#popupvideou" data-role="button" data-rel="popup" data-theme="e" >Listen and read Surah Al-Sajdah(video)</a>
 
 
@@ -327,6 +327,9 @@ Contact Us Immediately</a>
     });
     $('#btn_show').click(showBannerAtPosition);
     $('#btn_hide').click(function(){
+      AdMob.hideBanner();
+    });
+    $('#btn_hidee').click(function(){
       AdMob.hideBanner();
     });
     // test interstitial ad
