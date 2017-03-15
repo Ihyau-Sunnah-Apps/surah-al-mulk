@@ -34,6 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        $scope.addNotification = function (){
 	var today = new Date();
 		var tomorrow = new Date();
 		tomorrow.setDate(today.getDate());
