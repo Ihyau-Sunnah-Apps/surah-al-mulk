@@ -4,8 +4,8 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.ihyausunnah.surahalmulk"
-        version   = "1.0.4">
-	versionCode="26" 
+        version   = "1.0.5">
+	versionCode="28" 
 
     <name>Surah Al Mulk and Al Sajdah  </name>
 
@@ -58,7 +58,7 @@
 		<plugin name="cordova-plugin-insomnia" version="4.1.0" source="npm" />
 		<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 		<gap:plugin name="de.appplant.cordova.plugin.local-notification"  source="npm"/>
-
+<gap:plugin name="cordova-plugin-admobpro"  source="npm"/>
 		
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
