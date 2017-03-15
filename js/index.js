@@ -48,15 +48,20 @@ var app = {
 	
 		firstAt: tomorrow_at_6_am,
 		every: 1440 // "minute", "hour", "week", "month", "year"
-		 data: { meetingId:"one.html" }
+		
 		});	
 		
     },
-    cordova.plugins.notification.local.on("click", function (notification) {
-        if (notification.id == 1) {
-            joinMeeting(notification.data.meetingId);
-        }
-    });
+
+    //this should only be registered once    
+$scope.$on('$cordovaLocalNotification:schedule',function(notification) {
+    alert("scheduled: " + notification.id);
+});
+
+//this should only be registered once    
+$scope.$on('$cordovaLocalNotification:trigger',function(notification) {
+    alert("triggered: " + notification.id);
+});
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
