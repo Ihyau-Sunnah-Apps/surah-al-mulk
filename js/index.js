@@ -38,8 +38,8 @@ var app = {
 		var tomorrow = new Date();
 		tomorrow.setDate(today.getDate());
 		tomorrow.setHours(21);
-		tomorrow.setMinutes(0);
-		tomorrow.setSeconds(0);
+		tomorrow.setMinutes(00);
+		tomorrow.setSeconds(00);
 		var tomorrow_at_6_am = new Date(tomorrow);
 		cordova.plugins.notification.local.schedule({
 		id: 1,
