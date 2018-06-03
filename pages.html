@@ -1,0 +1,244 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Surah Al Mulk and Al-Sajdah</title>
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+    <link rel="stylesheet" href="css/nativedroid21.css" />
+    <link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="css/pages.js"></script>
+    <script src="css/jquery-1.7.1.min.js"></script>
+    <style>
+      /* Prevent FOUC */
+        body { opacity: 0; }
+    </style>
+
+     <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .fit {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .center {
+      display: block;
+      margin: auto;
+    }
+
+    .ui-dialog-titlebar-close {
+        visibility: hidden;
+    }
+
+    </style>
+
+</head>
+    
+<body>
+
+    <div data-role="page" class="nd2-no-menu-swipe" id="mulk-pages"  data-theme="b">
+        <div data-role="main" class="ui-content">
+            <div data-role="header" data-position="fixed"  data-fullscreen="true" class="wow fadeIn" >
+                <a href="index.html" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-home'></i></a>
+
+                <h1 class="wow fadeIn"  data-wow-delay='0.4s'> Suratul Mulk</h1>
+                <a href="#" id="help" onclick="setTimeout(function(){
+              $('#Info-i').popup();
+              $('#Info-i').popup('open');
+              },100);" data-ajax="false" class=" ui-btn ui-btn-inline ui-btn-fab ui-btn-right" style="margin-right: 80px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='fa fa-question'></i></a>
+
+                <a href="#" onclick="openReminderDialog(); return false;" id="share" class=" ui-btn ui-btn-inline ui-btn-fab ui-btn-right" style="margin-right: 40px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications-active'></i></a>
+                <a href="trans.html#mulk-translations" id="translations" data-ajax="false" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" ><i class='fa fa-language '></i></a>
+                
+                
+            </div>
+
+             <!--Popup appears only on Thursday Nights and Friday-->
+            <div data-role="popup" id="popupInfo" data-position-to="#share" data-arrow="t" class="ui-content"   style="max-width:350px;" style="display:none">
+                Tap here to remind others to read too
+                
+            </div>
+
+            <!--Info displayed on first Visit-->
+            <div data-role="popup" id="Info-i" data-position-to="#" data-arrow="t" class="ui-content" data-theme="a"  style="max-width:350px;" style="display:none">
+              <h4>Quick one-time Tutorial</h4>
+              Swipe right to move to next Page/Swipe Left to move ro previous page<br>
+                <a href="#"  onclick="closeTutoriali();setTimeout(function(){
+     $('#Info-ii').popup();
+    $('#Info-ii').popup('open');
+   },100);"  class="ui-btn ui-btn-inline ui-btn-fab">Next</a>
+                <a href="#close" class="ui-btn ui-btn-inline ui-btn-fab">Skip</a>
+            </div>
+
+            <div data-role="popup" id="Info-ii" data-position-to="#translations" data-arrow="t" class="ui-content" data-theme="a"  style="max-width:350px;" style="display:none">
+              Tap <i class="fa fa-language"></i> to view translations of Suratul Kahf  <br>
+                <a href="#"  onclick="closeTutorialii();setTimeout(function(){
+              $('#Info-iii').popup();
+              $('#Info-iii').popup('open');
+              },100);" class="ui-btn ui-btn-inline ui-btn-fab">Next</a>
+                <a href="#close" class="ui-btn ui-btn-inline ui-btn-fab">Skip</a>
+            </div>
+
+            <div data-role="popup" id="Info-iii" data-position-to="#share" data-arrow="t" class="ui-content" data-theme="a"  style="max-width:350px;" style="display:none">
+              Tap <i class="zmdi zmdi-notifications-active"></i> to remind others to read Suratul Kahf  <br>
+                <a href="#"  onclick="closeTutorialiii();setTimeout(function(){
+              $('#Info-iv').popup();
+              $('#Info-iv').popup('open');
+              },100);" class="ui-btn ui-btn-inline ui-btn-fab">Next</a>
+                <a href="#close" class="ui-btn ui-btn-inline ui-btn-fab">Skip</a>
+            </div>
+            <div data-role="popup" id="Info-iv" data-position-to="#help" data-arrow="t" class="ui-content" data-theme="a"  style="max-width:350px;" style="display:none">
+              Tap <i class="fa fa-question"></i> for assistance on how to use the app <br>
+                <a href="#close"  class="ui-btn ui-btn-inline ui-btn-fab">Got It</a>
+                
+            </div>
+          
+           <p><img class="center fit" id="mulk-page" src="images/562.jpg" ></p>
+
+</div>
+
+ </div>
+
+ <div data-role="page" class="nd2-no-menu-swipe" id="sajdah-pages"  data-theme="b">
+        <div data-role="main" class="ui-content">
+            <div data-role="header" data-position="fixed"  data-fullscreen="true" class="wow fadeIn" >
+                <a href="index.html" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-home'></i></a>
+
+                <h1 class="wow fadeIn"  data-wow-delay='0.4s'> Suratul Sajdah</h1>
+                
+                <a href="#" onclick="openReminderDialog(); return false;" id="share" class=" ui-btn ui-btn-inline ui-btn-fab ui-btn-right" style="margin-right: 40px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications-active'></i></a>
+                <a href="sajdahtrans.html" id="translations" data-ajax="false" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" ><i class='fa fa-language '></i></a>
+                
+                
+            </div>
+          
+           <p><img class="center fit" id="sajdah-page" src="images/418.jpg" ></p>
+
+</div>
+
+ </div>
+
+
+
+
+  <script>
+
+//Checks if its the user's first time and displays a tutorial screen
+  function tutorialScreen(){
+        var tutorial = window.localStorage.getItem("tutorial");
+         if(!tutorial){
+            window.localStorage.setItem("tutorial", "1");
+            $(document).ready(function(){
+   setTimeout(function(){
+     $('#Info-i').popup();
+    $('#Info-i').popup('open');
+   },500); // 5000 to load it after 5 seconds from page load
+});
+    
+    
+     }
+    
+     }
+     //end
+     function closeTutoriali() {
+    $('#Info-i').popup('close');
+};
+function closeTutorialii() {
+    $('#Info-ii').popup('close');
+};
+function closeTutorialiii() {
+    $('#Info-iii').popup('close');
+};
+
+function openHelpDialog() {
+    $( "#pagesdialog-message" ).dialog({
+            modal: true,
+            resizable: false,
+            
+            buttons: {
+                Ok: function() {
+                    $( this ).dialog( "close" );}}})};
+  </script>
+
+  <script type="text/javascript"> 
+var day= new Date();
+var today= day.getDay();
+
+switch(today) {
+    case 4:
+
+$(document).ready(function(){
+   setTimeout(function(){
+     $('#popupInfo').popup();
+    $('#popupInfo').popup('open');
+   },500);setTimeout(function(){
+     closepopup()
+   },5000); // 5000 to load it after 5 seconds from page load
+});
+    
+    
+     
+
+
+function closepopup() {
+    $('#popupInfo').popup('close');
+};
+
+break;
+
+case 5:
+
+$(document).ready(function(){
+   setTimeout(function(){
+     $('#popupInfo').popup();
+    $('#popupInfo').popup('open');
+   },500);setTimeout(function(){
+     closepopup()
+   },5000); // 5000 to load it after 5 seconds from page load
+});
+    
+    
+     
+
+
+function closepopup() {
+    $('#popupInfo').popup('close');
+};
+
+break;
+
+   } 
+
+    
+          </script>
+ 
+<script src="css/jquery.js"></script>
+<script src="css/jquery.min.js"></script>
+
+
+        <script src="css/jquery-ui.min.js"></script>
+        
+        <script src="css/jquery.mobile.min.js"></script>
+       
+<script src="css/jquery-ui.js"></script>
+
+
+        <script src="css/nativedroid2.js"></script>
+        <script src="css/nd2settings.js"></script>
+
+        <script src="css/swipe-page.js"></script>
+        <script src="css/share.js"></script>
+        
+        
+       
+ 
+
+    </body>
+</html>

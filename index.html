@@ -1,378 +1,298 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Surah Al Mulk</title>
-	<script src="android_asset/www/css/jquery-1.7.1.min.js"></script>
-	
-	<script src="android_asset/www/css/jquery.mobile-1.3.0.js"></script>
-	<link rel="stylesheet"  href="android_asset/www/css/jquery.mobile-1.3.0.css">
-	<link rel="stylesheet" href="android_asset/www/css/jqm-demos.css">
-	
-	<link rel="shortcut icon" href="../../favicon.ico">
-	
-<style>
-        .nav-search .ui-btn-up-a {
-            background-image:none;
-            background-color:#333333;
-        }
-        .nav-search .ui-btn-inner {
-            border-top: 1px solid #888;
-            border-color: rgba(255, 255, 255, .1);
-        }
-        .nav-search .ui-btn.ui-first-child {
-            border-top-width: 0;
-            background: #111;
-        }
-        .userform {
-			padding: .8em 1.2em;
-		}
-        .userform h2 {
-			color: #555;
-			margin: 0.3em 0 .8em 0;
-			padding-bottom: .5em;
-			border-bottom: 1px solid rgba(0,0,0,.1);
-		}
-        .userform label {
-			display: block;
-			margin-top: 1.2em;
-		}
-        .switch .ui-slider-switch {
-			width: 6.5em !important;
-		}
-        .ui-grid-a {
-			margin-top: 1em;
-			padding-top: .8em;
-			margin-top: 1.4em;
-			border-top: 1px solid rgba(0,0,0,.1);
-		}
-    </style>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Surah Al Mulk & Al-Sajdah</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+        
+        <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+        
+        <link rel="stylesheet" href="css/fonti-awesome.min.css" />
+        <link rel="stylesheet" href="css/nativedroid2.css" />
+        <link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
+        
+        <style>
+             /* Prevent FOUC */
+            body { opacity: 0; }
+        </style>
+        <style>
+        .badged:after{
+            content:attr(data-count);
+            font-size:12px;
+            text-shadow: 0 1px #444;
+            text-align:center;
+            position:relative;
+            color:#EFEFEF;
+            display:inline-block;
+            z-index:2000;
+            top:0px;
+            right:-60px;
+            border-radius:50%;
+            padding:0px 3px;
+            /*min-width:22px;*/
+            border:2px solid #eee;
+            box-shadow: -1px 1px 4px #444;
+            margin:0 4px;
+            background: #ff0505;
+        }
+            </style>
 
-</head>
-<body>
-<div class="app">
-            <h1></h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening"></p>
-                <p class="event received"></p>
-            </div>
+    </head>
+    <body>
+        <div data-role="page" id="homepage" class="nd2-no-menu-swipe">
+
+            <div data-role="header"  data-position="fixed"  class="wow fadeIn" >
+                
+                <h1 class="wow fadeIn" data-wow-delay='0.4s'>Surah al Mulk & Al-Sajdah</h1>
+                
+                <a href="#notifications"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" id="notification" style="margin-right: 42px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications '></i></a>
+                <a href="#more"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"><i class='zmdi zmdi-more-horiz'></i></a>
+                <ul data-role="nd2tabs" data-swipe="true">
+
+                    <li data-tab="mulk" data-tab-active="true">Surah Al Mulk</li>
+                    <li data-tab="sajdah" >Surah Al-Sajdah</li>
+                   
+                </ul>
         </div>
+            
 
-<div data-role="page" id="one" class="demo-page" data-theme="a" data-next="#two">
+       
 
+            <div data-role="nd2tab" data-tab="mulk">
+                <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+                   <ul data-role="listview" data-icon="false">
+   
+                        <li>
+                            <a href="pages.html#mulk-pages" onclick="window.plugins.insomnia.keepAwake();window.plugins.toast.showLongBottom('Swipe to navigate between pages', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});AdMob.showAd(false);" data-ajax="false">
+                                <img src="icons/read.png" class="ui-thumbnail ui-thumbnail-circular" />
+                               <br>Read Surah Al-Mulk
+                            </a>
+                        </li>
+                        <li>
+                            <div style="display: none">
+                                <input type="url" size="60" value="file:///storage/emulated/0/Download/Surah Al-Mulk.mp4" id="vidUrl"  />
+                            </div>
+                            <!--Plays the video file if downloaded/Streams it if not-->
+                            <a href="#" onclick="doesitexistm(); return false;">
+                                <img src="icons/listen.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+                                <br>Listen and Read Surah Al Mulk(Video)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="benefits.html#mulk" data-ajax="false">
+                                <img src="icons/benefits.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+                                <br>Benefits of Surah Al Mulk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="benefits.html#faq" data-ajax="false">
+                                <img src="icons/faq.png" class="ui-thumbnail ui-thumbnail-circular" />
+                                <br>Frequently Asked Questions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="openReminderDialog();">
+                                <img src="icons/share.png" class="ui-thumbnail ui-thumbnail-circular" />
+                                <br>Remind others to read Surah Al Mulk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="market://details?id=com.ihyausunnah.thesunnahrevival"  onclick="window.open(this.href,'_system'); return false;"  data-ajax="false">
+                                <img src="icons/tsr.png" class="ui-thumbnail ui-thumbnail-circular" />
+                                <br>Download Surah Al Mulk & Al-Sajdah App
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
 
+                </div>
+            </div>
 
-<div data-theme="b" data-role="header" data-position="fixed">
-<a href="#nav-panel" data-icon="bars" data-role="button" data-inline="true" data-theme="e"   >Menu</a>
+            <div data-role="nd2tab" data-tab="sajdah">
+                <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+                    <ul data-role="listview" data-icon="false">
+   
+                        <li>
+                            <a href="pages.html#sajdah-pages" onclick="window.plugins.insomnia.keepAwake();window.plugins.toast.showLongBottom('Swipe to navigate between pages', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});AdMob.showAd(false);" data-ajax="false">
+                                <img src="icons/read.png" class="ui-thumbnail ui-thumbnail-circular" />
+                               <br>Read Surah Al-Sajdah
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="icons/listen.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+                                <br>Listen and Read Surah Al Sajdah(Video)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="benefits.html#sajdah" data-ajax="false">
+                                <img src="icons/benefits.jpg" class="ui-thumbnail ui-thumbnail-circular" />
+                                <br>Benefits of Surah Al Sajdah
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="openReminderDialog();">
+                                <img src="icons/share.png" class="ui-thumbnail ui-thumbnail-circular" />
+                                <br>Remind others to read Surah Al Sajdah
+                            </a>
+                        </li>
+                    </ul>
 
-<h3><strong>Surah Al Mulk and Al-Sajdah </strong></h3>
-         <button onclick="window.plugins.socialsharing.share('Have a look at Surah al Mulk and Al-Sajdah App', null, null, 'https://goo.gl/1X7cJ6')" data-theme="e" >Share App</button>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    
 
-</div>
-<div data-role="navbar" data-theme="b" >
-    <ul>
-        <li><a href="#" class="ui-btn-active"  data-theme="e" >Surah Al Mulk</a></li>
-        <li><a href="#two"data-theme="e" >Al-Sajdah</a></li>
-    </ul>
-</div><!-- /navbar -->
-<div data-role="main" class="ui-content" id="mulk">
-Tap here <a data-role="button" href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20Mulk%20App&body=---Please%20Write%20Your%20Feedback%20below%20in%20English---%0A%0ASent%20from%20Version%201.0.5" target="_top"  class="ui-icon-alt"  data-icon="alert" data-inline="true" data-theme="e" data-iconpos="notext" >Contact Us</a>to report a problem 
+                </div>
+            </div>
 
-<a href="one.html#one" data-role="button" id='btn_hide'  data-theme="e" data-ajax="false">Read Surah Al-Mulk</a>
-<a href="#popupvideo" data-role="button" data-rel="popup" data-theme="e" >Listen and read Surah Al-Mulk(video)</a>
+            <div data-role="popup" id="more">
 
-<a href="ads.html#thirtythree"  data-role="button" data-theme="e" data-ajax="false">Commentary videos of Surah Al-Mulk</a>
-<a href="ads.html#fifty"  data-role="button" data-theme="e" data-ajax="false">Benefits of Surah Al Mulk</a>
-<a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20mulk%20App&body=Which%20Translation%20of%20Surah%20Al%20Mulk%20and%20Al%20Sajdah%20would%20you%20like%20to%20be%20added%0A%0ASent%20from%20Version%201.0.5" data-role="button" data-theme="e" target="_top">Request Surah Translation</a>
-<a href="one.html#whatsapp"  data-role="button" data-theme="e" data-ajax="false">Join Our Whatsapp Daawah list</a>
-<button onclick="window.plugins.socialsharing.share('I am reminding you to read Surah Al Mulk and Al Sajdah its the Sunnah of our beloved Prophet Muhammad (SAW).\n\nIt was narrated that ‘Abd-Allaah ibn Mas’ood said: \n\nWhoever readsTabaarak allaahi bi yadihi’l-mulk[i.e., Soorat al-Mulk] every night, Allaah will protect him from the torment of the grave. At the time of the Messenger of Allaah (peaceand blessings of Allaah be upon him) we used to call ital- maani’ah(that which protects). In the Book of Allaah it is a soorah which, whoever recites it every night has done very well. \n\nNarrated by al-Nasaa’i, 6/179;\n\nIt was narrated from Jaabir, that the Prophet (peace and blessings of Allaah be upon him) never used to sleep until he had recitedAlif-laam-meem tanzeel[al-Sajdah] andTabaarak alladhi bi yadihi’l-mulk[al-Mulk].\n\n Narrated by al-Tirmidhi, 2892; Ahmad, 14249. Al-Albaani said inSaheeh al-Tirmidhi(3/6) that this hadeeth is saheeh.\n\nSent from Surah Al Mulk android App https://goo.gl/1X7cJ6\n\nDont have an android phone read online', null, null, 'tsrquranproject.github.io')" data-theme="e">Remind A friend</button>
+                <div data-role="content">
+                    <a href="#" onclick="window.plugins.socialsharing.share('Have a look at Surah Al Mulk & Al-Sajdah App \n\n', null, null, 'https://goo.gl/Ky8z01'); return false;"   data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Share App</a>
+                    <a href="benefits.html#about"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> About App</a>
+                    <a href="https://thesunnahrevival.wordpress.com/" class="ui-btn ui-btn-primary" onclick="window.open(this.href,'_blank');displayToast(); return false;" >Visit Blog</a>
+                    <a href="market://details?id=com.ihyausunnah.surahalmulk"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Rate this App</a>
+                    <a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20Mulk%20App&body=**Please%20write%20your%20feedback%20here%20in%20English**%0A%0ASent%20from%3A%0ASurah%20Al%20Mulk%20Android%20App%20Vesion%201.0.6"  data-role="button" data-inline="true" class="ui-btn ui-btn-primary"> Send Feedback</a>
+                     
+                    <a href="benefits.html#more"  data-role="button" data-inline="true" data-ajax="false" class="ui-btn ui-btn-primary"> More Apps</a>
+                    <a href="http://m.facebook.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-facebook'></i></a>
+                    <a href="http://twitter.com/thesunahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-twitter'></i></a>
+                    <a href="http://telegram.me/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-telegram'></i></a>
+                    <a href="http://instagram.com/thesunnahrevival" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='fa fa-instagram'></i></a>
 
-<h6><strong>Hint Use the button above to remind a friend to recite Surah Al Mulk </strong><a href="#popupInfo" data-rel="popup" data-role="button" class="ui-icon-alt" data-inline="true" data-transition="pop" data-icon="info" data-theme="e" data-iconpos="notext">Why Remind</a> </strong></h6>
+                </div>
+            </div>
+            <div data-role="popup" id="notifications" >
+                <div data-role="header">
+                    <h1 class='nd-title'>Manage Notifications:</h1>
+                </div>
+                <h5>Tick to enable untick to disable</h5>
+                <div id="checkbox-container">
+                    <form>
+                        <fieldset data-role="controlgroup">
 
-<a href="#popupMenu3" data-rel="popup" data-role="button" data-theme="e">Join our Social Pages</a>
+                            <label>
+                        <input type="checkbox" name="checkbox-0 " id="checkboxi" data-theme="d">Suratul Mulk & Al-Sajdah every Night
+                    </label>
+                    <div id="night-time" style="display: none;">
+                        <form>
+                            <label for="time-1">Select the time to be notified every Night</label>
+                            <input type="time" data-clear-btn="false" name="time-1" id="time-1" value="">
+                            <p id ="night-time-set"></p>
+                             <a href="#" id="save-time" data-role="button"  onclick="
 
-<div data-role="popup" id="popupInfo" class="ui-content" data-theme="e" style="max-width:350px;">
-  <h3>Why Remind</h3><p><strong>Abu Mas'ud Al-Ansari (r.a.) narrated that Allah’s Messenger (s.a.w.s.) said, “…One who guides to something good has a reward similar to that of its doer.” (Muslim, Vol. 4, Hadeeth 4665) </strong></p>
-</div>
+                             var timeSet = $('#time-1').val();
+                             if (timeSet == '') {
+                                
+                                document.getElementById('night-time-set').style.color = 'red';
+                                document.getElementById('night-time-set').innerHTML = 'Error! Please Select Time Above';
+                             
+                             }
+                             else {
+                             
+                             setNotification();
+                             }
+                             
+                             " data-theme="b">Save</a>
+                        
+                         </form>
+                    </div>
 
-				
-
-</div>
-
-<div data-role="panel"  data-theme="a" id="nav-panel" data-position="left" data-display="overlay">
-
-        <ul data-role="listview" data-theme="d" class="nav-search">
-	    <li><a href="index.html" data-ajax="false">Home</a></li>
-            <li><a href="#popupInfo1" data-rel="popup" data-transition="pop"  >About</a> </strong></li>
-			
-            <li><a href="one.html#twentyseven" data-ajax="false">About the Sunnah Revival</a></li>
-            <li><a  data-ajax="false" href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20Mulk&body=---Please%20write%20your%20feedback%20here---%0A%0ASent%20from%20Version%201.0.5" target="_top">Send Us feedback</a></li>
-             <li><a href="one.html#twentyeight" data-ajax="false">Need Help</a></li>
-            <li><button onclick="window.open('market://details?id=com.ihyausunnah.surahalmulk')">Rate this App</a></li>
-<li><button onclick="window.open('one.html#fiftythree');">More Apps</button>
-        </ul>
-		<div data-role="popup" id="popupInfo1" class="ui-content" data-theme="e" style="max-width:350px;">
-  <h3>About</h3><a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-  <p><strong>Surah Al-Mulk and Al Sajdah  App</strong></p>
-<p><strong>Version 1.0.4</strong></p>
-<p><strong>Images are from <a href="http://myquran.us"onclick="window.open(this.href,'_system'); return false;" >myQuran.us</a></strong></p>
-<p><strong>Translations(All) from <a href="http://tanzil.net/trans/en.sahih" onclick="window.open(this.href,'_system'); return false;" >tanzil.net</a>
-<p><strong>Developed by TSR Apps(<a href="https://twitter.com/tsrapps" onclick="window.open(this.href,'_system'); return false;" >@tsrapps</a>)</strong></p>
-<p><strong>Powered by <a href="http://thesunnahrevival.wordpress.com"onclick="window.open(this.href,'_system'); return false;" >The Sunnah revival Blog</a>(<a href="http://twitter.com/thesunahrevival">@thesunahrevival</a>)</strong></p>
-<p><strong>Special thanks to Said Muhammad aka SMS( <a href="https://twitter.com/saidmohasaeed" onclick="window.open(this.href,'_system'); return false;">@saidmohasaeed</a></strong></p>
-<p><strong>Dont forget us in your</strong><i>duas</i></p>
-<p><strong>©2015-2017 TSR Apps</strong></p>
-
-
-<a href="#popupInfo2" data-rel="popup" data-role="button" class="ui-icon-alt" data-inline="true" data-transition="pop" data-icon="info" data-theme="e" >Disclaimer</a></p>
-<div data-role="popup" id="popupInfo2" class="ui-content" data-theme="e" style="max-width:350px;">
-  <h3>Disclaimer</h3><p><strong>No translation of Quran can be a hundred percent accurate, nor it can be used as a replacement of the Quran text. We have tried to provide a set of mostly acceptable quran translations here, but we cannot guarantee their authenticity and/or accuracy. Please use them at your own discretion.</strong></p><p><strong>We have tried our level best to provide you with the most accurate data but we are human beings we may make errors if you find any errors 
-<a href="mailto:thesunnahrevival.tsr@gmail.com?Subject=Surah%20AlMulk%20" target="_top">
-Contact Us Immediately</a>
-</strong></p>
-
-
-</div>
-</div>
-</div>
-<div data-role="popup" id="popupMenu3" data-theme="d">
-        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
-            <h6><strong>We are social Join us on:</strong></h6>
-<li><a data-role="button"  href="http://m.facebook.com/TSRapps"data-theme="e"  onclick="window.open(this.href,'_system'); return false;" data-inline="true">Facebook</a></li>
-<li><a data-role="button"  href="http://twitter.com/TSRapps"data-theme="e"  onclick="window.open(this.href,'_system'); return false;" data-inline="true">Twitter</a></li>
-<li><a data-role="button"  href="http://telegram.me/TSRapps"data-theme="e"  onclick="window.open(this.href,'_system'); return false;" data-inline="true">Telegram</a></li>
-<li><a data-role="button"  href="http://instagram.com/TSRapps"data-theme="e"  onclick="window.open(this.href,'_system'); return false;" data-inline="true">Instagram</a></li>
-</ul>
-</div>
-
-
-<div data-role="popup" id="popupvideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
-
-    <iframe src="https://player.vimeo.com/video/65565710" width="200" height="298" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/64552532">Surah Al-Mulk</a><br> from <a href="https://vimeo.com/user17555859">Al-Qur&aacute;n</a><br> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-</div>
-</div>
-
-<div data-role="page" id="two" class="demo-page" data-theme="a" data-next="#two">
-
-
-
-<div data-theme="b" data-role="header" data-position="fixed">
-<a href="#nav-panel" data-icon="bars" data-role="button" data-inline="true" data-theme="e"   >Menu</a>
-
-<h3><strong>Surah Al Mulk and Al-Sajdah </strong></h3>
-         <button onclick="window.plugins.socialsharing.share('Have a look at Surah al Mulk and Al-Sajdah App', null, null, 'https://goo.gl/1X7cJ6')" data-theme="e" >Share App</button>
-
-</div>
-<div data-role="navbar" data-theme="b" >
-    <ul>
-        <li><a href="#one" class="ui-btn-active"  data-theme="e" >Surah Al Mulk</a></li>
-        <li><a href="#"data-theme="e" >Al-Sajdah</a></li>
-    </ul>
-</div><!-- /navbar -->
-<div data-role="main" class="ui-content" id="sajdah">
-Tap here <a data-role="button" href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20Mulk%20App&body=---Please%20Write%20Your%20Feedback%20below%20in%20English---%0A%0ASent%20from%20Version%201.0.5" target="_top"  class="ui-icon-alt"  data-icon="alert" data-inline="true" data-theme="e" data-iconpos="notext" >Contact Us</a>to report a problem 
-
-<a href="one.html#four" data-role="button" data-theme="e" id='btn_hidee' data-ajax="false">Read Surah Al-Sajdah</a>
-<a href="#popupvideou" data-role="button" data-rel="popup" data-theme="e" >Listen and read Surah Al-Sajdah(video)</a>
-
-
-<a href="ads.html#sixty"  data-role="button" data-theme="e" data-ajax="false">Benefits of Surah Al Sajdah</a>
-<a href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20mulk%20App&body=Which%20Translation%20of%20Surah%20Al%20Mulk%20and%20Al%20Sajdah%20would%20you%20like%20to%20be%20added%0A%0ASent%20from%20Version%201.0.5" data-role="button" data-theme="e"  target="_top">Request Surah Translation</a>
-<a href="one.html#whatsapp"  data-role="button" data-theme="e" data-ajax="false">Join Our Whatsapp Daawah list</a>
-<button onclick="window.plugins.socialsharing.share('I am reminding you to read Surah Al Mulk and Al Sajdah its the Sunnah of our beloved Prophet Muhammad (SAW).\n\nIt was narrated that ‘Abd-Allaah ibn Mas’ood said: \n\nWhoever readsTabaarak allaahi bi yadihi’l-mulk[i.e., Soorat al-Mulk] every night, Allaah will protect him from the torment of the grave. At the time of the Messenger of Allaah (peaceand blessings of Allaah be upon him) we used to call ital- maani’ah(that which protects). In the Book of Allaah it is a soorah which, whoever recites it every night has done very well. \n\nNarrated by al-Nasaa’i, 6/179;\n\nIt was narrated from Jaabir, that the Prophet (peace and blessings of Allaah be upon him) never used to sleep until he had recitedAlif-laam-meem tanzeel[al-Sajdah] andTabaarak alladhi bi yadihi’l-mulk[al-Mulk].\n\n Narrated by al-Tirmidhi, 2892; Ahmad, 14249. Al-Albaani said inSaheeh al-Tirmidhi(3/6) that this hadeeth is saheeh.\n\nSent from Surah Al Mulk android App https://goo.gl/1X7cJ6\n\nDont have an android phone read online', null, null, 'tsrquranproject.github.io')" data-theme="e">Remind A friend</button>
-
-<h6><strong>Hint Use the above button to remind a friend to recite Surah Al Sajdah </strong><a href="#popupInfo" data-rel="popup" data-role="button" class="ui-icon-alt" data-inline="true" data-transition="pop" data-icon="info" data-theme="e" data-iconpos="notext">Why Remind</a> </strong></h6>
-<a href="#popupMenu2016" data-rel="popup" data-role="button" data-theme="e">Join Our Social Pages</a>
-<div data-role="popup" id="popupInfo" class="ui-content" data-theme="e" style="max-width:350px;">
-  <h3>Why Remind</h3><p><strong>Abu Mas'ud Al-Ansari (r.a.) narrated that Allah’s Messenger (s.a.w.s.) said, “…One who guides to something good has a reward similar to that of its doer.” (Muslim, Vol. 4, Hadeeth 4665) </strong></p>
-</div>
-				
-
-
-</div>
-
-<div data-role="popup" id="popupvideou" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
-
-    <iframe src="https://player.vimeo.com/video/64997729" width="200" height="298" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/64552532">Surah Al-Sajdah</a><br> from <a href="https://vimeo.com/user17555859">Al-Qur&aacute;n</a><br> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-</div>
-
-
-<div data-role="popup" id="popupMenu2016" data-theme="d">
-        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
-            <h6><strong>We are social Join us on:</strong></h6>
-<li><a data-role="button"  href="http://m.facebook.com/thesunnahrevival"data-theme="e"  onclick="window.open(this.href,'_system'); return false;" data-inline="true">Facebook</a></li>
-<li><a data-role="button"  href="http://twitter.com/thesunahrevival"data-theme="e"  onclick="window.open(this.href,'_system'); return false;" data-inline="true">Twitter</a></li>
-<li><a data-role="button"  href="http://telegram.me/thesunnahrevival"data-theme="e"  onclick="window.open(this.href,'_system'); return false;" data-inline="true">Telegram</a></li>
-<li><a data-role="button"  href="http://instagram.com/thesunnahrevival"data-theme="e"  onclick="window.open(this.href,'_system'); return false;" data-inline="true">Instagram</a></li>
-</ul>
-</div>
-<div data-role="panel"  data-theme="a" id="nav-panel" data-position="left" data-display="overlay">
-
-        <ul data-role="listview" data-theme="d" class="nav-search">
-	    <li><a href="index.html" data-ajax="false">Home</a></li>
-            <li><li><a href="#popupInfo1" data-rel="popup" data-transition="pop"  >About</a> </strong></li></li>
-            <li><a href="one.html#twentyseven" data-ajax="false">About the Sunnah Revival</a></li>
-            <li><a  data-ajax="false" href="mailto:thesunnahrevival.tsr@gmail.com?&subject=Surah%20Al%20Mulk&body=---Please%20write%20your%20feedback%20here---%0A%0ASent%20from%20Version%201.0.5" target="_top">Send Us feedback</a></li>
-             <li><a href="one.html#twentyeight" data-ajax="false">Need Help</a></li>
-            <li><button onclick="window.open('market://details?id=com.ihyausunnah.surahalmulk')">Rate this App</a></li>
-<li><button onclick="window.open('one.html#fiftythree');">More Apps</button>
-        </ul>
-		<div data-role="popup" id="popupInfo1" class="ui-content" data-theme="e" style="max-width:350px;">
-  <h3>About</h3><a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-  <p><strong>Surah Al-Mulk and Al Sajdah  App</strong></p>
-<p><strong>Version 1.0.5</strong></p>
-<p><strong>Images are from <a href="http://myquran.us"onclick="window.open(this.href,'_system'); return false;" >myQuran.us</a></strong></p>
-<p><strong>Translations(All) from <a href="http://tanzil.net/trans/en.sahih" onclick="window.open(this.href,'_system'); return false;">tanzil.net</a>
-<p><strong>Developed by TSR Apps(<a href="https://twitter.com/tsrapps"onclick="window.open(this.href,'_system'); return false;" >@tsrapps</a>)</strong></p>
-<p><strong>Powered by <a href="http://thesunnahrevival.wordpress.com"onclick="window.open(this.href,'_system'); return false;" >The Sunnah revival Blog</a>(<a href="http://twitter.com/thesunahrevival">@thesunahrevival</a>)</strong></p>
-<p><strong>Special thanks to Said Muhammad aka SMS( <a href="https://twitter.com/saidmuhammadsms"onclick="window.open(this.href,'_system'); return false;" >@saidmuhammadsms</a></strong></p>
-<p><strong>Dont forget us in your</strong><i>duas</i></p>
-<p><strong>©2015-2017 TSR Apps</strong></p>
-<a href="#popupInfo2" data-rel="popup" data-role="button" class="ui-icon-alt" data-inline="true" data-transition="pop" data-icon="info" data-theme="e" >Disclaimer</a></p>
-<div data-role="popup" id="popupInfo2" class="ui-content" data-theme="e" style="max-width:350px;">
-  <h3>Disclaimer</h3><p><strong>No translation of Quran can be a hundred percent accurate, nor it can be used as a replacement of the Quran text. We have tried to provide a set of mostly acceptable quran translations here, but we cannot guarantee their authenticity and/or accuracy. Please use them at your own discretion.</strong></p><p><strong>We have tried our level best to provide you with the most accurate data but we are human beings we may make errors if you find any errors 
-<a href="mailto:ihyausunnah@yahoo.com?Subject=Surah%20AlMulk%20" target="_top">
-Contact Us Immediately</a>
-</strong></p>
-</div>
-</div>
-		
-		
-		
-		
-</div>
-
-
-</div>
-
-<script>
-  // place our admob ad unit id here
-  var admobid = {};
-  if( /(android)/i.test(navigator.userAgent) ) {
-    admobid = { // for Android
-      banner: 'ca-app-pub-6981212130280607/7230103171',
-      interstitial: 'ca-app-pub-6981212130280607/1183569579'
-    };
-  } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
-    admobid = { // for iOS
-      banner: 'ca-app-pub-6981212130280607/7230103171',
-      interstitial: 'ca-app-pub-6981212130280607/1183569579'
-    };
-  } else {
-    admobid = { // for Windows Phone
-      banner: 'ca-app-pub-6981212130280607/7230103171',
-      interstitial: 'ca-app-pub-6981212130280607/1183569579'
-    };
-  }
-  function createSelectedBanner(){
-    if(AdMob) AdMob.createBanner({
-      adId: admobid.banner,
-      overlap: $('#overlap').is(':checked'),
-      offsetTopBar: $('#offsetTopBar').is(':checked'),
-      adSize: $('#adSize').val(),
-      position: $('#adPosition').val(),
-    });
-  }
-  function showBannerAtPosition(){
-    if(AdMob) AdMob.showBanner( $('#adPosition').val() );
-  }
-  function onDeviceReady() {
-    if (! AdMob) { alert( 'admob plugin not ready' ); return; }
-    initAd();
-    // display a banner at startup
-    createSelectedBanner();
-  }
-  function initAd(){
-    AdMob.getAdSettings(function(info){
-      console.log('adId: ' + info.adId + '\n' + 'adTrackingEnabled: ' + info.adTrackingEnabled);
-    }, function(){
-      console.log('failed to get user ad settings');
-    });
-    AdMob.setOptions({
-      // adSize: 'SMART_BANNER',
-      position: AdMob.AD_POSITION.BOTTOM_CENTER,
-      isTesting: false, // set to true, to receiving test ad for testing purpose
-      bgColor: 'black', // color name, or '#RRGGBB'
-      // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
-      // offsetTopBar: false, // avoid overlapped by status bar, for iOS7+
-    });
-    // new events, with variable to differentiate: adNetwork, adType, adEvent
-    $(document).on('onAdFailLoad', function(e){
-      // when jquery used, it will hijack the event, so we have to get data from original event
-      if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
-      var data = e.detail || e.data || e;
-      alert('error: ' + data.error +
-          ', reason: ' + data.reason +
-          ', adNetwork:' + data.adNetwork +
-          ', adType:' + data.adType +
-          ', adEvent:' + data.adEvent); // adType: 'banner', 'interstitial', etc.
-    });
-    $(document).on('onAdLoaded', function(e){
-    });
-    $(document).on('onAdPresent', function(e){
-    });
-    $(document).on('onAdLeaveApp', function(e){
-    });
-    $(document).on('onAdDismiss', function(e){
-    });
-    $('#btn_create').click(createSelectedBanner);
-    $('#btn_remove').click(function(){
-      AdMob.removeBanner();
-    });
-    $('#btn_show').click(showBannerAtPosition);
-    $('#btn_hide').click(function(){
-      AdMob.hideBanner();
-    });
-    $('#btn_hidee').click(function(){
-      AdMob.hideBanner();
-    });
-    // test interstitial ad
-    $('#btn_prepare').click(function(){
-      AdMob.prepareInterstitial({
-        adId:admobid.interstitial,
-        autoShow: $('#autoshow').is(':checked'),
-      });
-    });
-    $('#btn_showfull').click(function(){
-      AdMob.showInterstitial();
-    });
-    // test case for #256, https://github.com/floatinghotpot/cordova-admob-pro/issues/256
-    $(document).on('backbutton', function(){
-      if(window.confirm('Are you sure to quit?')) navigator.app.exitApp();
-    });
-    // test case #283, https://github.com/floatinghotpot/cordova-admob-pro/issues/283
-    $(document).on('resume', function(){
-      AdMob.showInterstitial();
-    });
-  }
-  // test the webview resized properly
-  $(window).resize(function(){
-    $('#textinfo').html('web view: ' + $(window).width() + " x " + $(window).height());
-  });
-  $(document).ready(function(){
-    // on mobile device, we must wait the 'deviceready' event fired by cordova
-    if(/(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent)) {
-      document.addEventListener('deviceready', onDeviceReady, false);
-    } else {
-      onDeviceReady();
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div data-role="popup" id="popupInfo" data-position-to="#notification" data-arrow="t" class="ui-content" data-theme="b"  style="max-width:350px;" style="display:none">
+                Tap <i class="zmdi zmdi-notifications"></i> to manage notification reminders such as Suratul Kahf reminders on Friday
+         </div>
+        </div>
+        <!--Scripts-->
+       
+        <script src="css/jquery.min.js"></script>
+        <script src="css/jquery-ui.min.js"></script>
+        <script src="css/jquery.mobile.min.js"></script>
+        <script src="css/localnotification.js"></script>
+        
+        <script type="text/javascript">
+    $(function() {
+    if( ! localStorage.getItem( "lang" ) ) {
+      localStorage.setItem('lang', 'Trans/en.sahih.xml');
     }
   });
+  </script>
+  <script type="text/javascript">
+    //Checks if its the user's first time an displays a welcome screen
+    function welcomeScreen(){
+        var welcome = window.localStorage.getItem("welcomeNew");
+         if(!welcome){
+            window.localStorage.setItem("welcomeNew", "1");
+            $(document).ready(function(){
+   setTimeout(function(){
+     $('#popupInfo').popup();
+    $('#popupInfo').popup('open');
+   },500);setTimeout(function(){
+     closepopup()
+   },5000); // 5000 to load it after 5 seconds from page load
+});
+    
+    
+     
+
+
+  
+          }
+
+     }
+      function closepopup() {
+    $('#popupInfo').popup('close');
+}; 
+    
 </script>
-
-
-	
-       
-<script type="text/javascript" src="android_asset/www/css/buttons.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-</body>
+  <script type="text/javascript">
+    function showhide(id) {
+        var e = document.getElementById(id);
+        e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+     }
+                            
+  </script>
+        <script src="css/ads.js"></script>
+        <script src="css/time.js"></script>
+        <script src="js/share.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="css/nativedroid2.js"></script>
+        <script src="css/nd2settings.js"></script>
+        <script src="css/checkbox.js"></script>
+    </body>
 </html>
+
+
