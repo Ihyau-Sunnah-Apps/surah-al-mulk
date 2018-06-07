@@ -19,11 +19,12 @@ function setNotification() {
 
   cordova.plugins.notification.local.schedule({
     id: 1,
-    title: 'Reminder to recite Suratul Kahf',
+    title: 'Reminder to recite Suratul Mulk and Al-Sajdah',
     text: 'Tap here to read now',
     trigger:{
     firstAt: every_night,
-    every: "day"
+    every: "day",
+    count: 1
         },
     icon: 'res://icon',
     smallIcon: 'res://ic_popup_reminder',

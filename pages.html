@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
     <link rel="stylesheet" href="css/font-awesome.css">
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="css/pages.js"></script>
+    <script type="text/javascript" src="js/pages.js"></script>
     <script src="css/jquery-1.7.1.min.js"></script>
     <style>
       /* Prevent FOUC */
@@ -60,11 +60,8 @@
                 
             </div>
 
-             <!--Popup appears only on Thursday Nights and Friday-->
-            <div data-role="popup" id="popupInfo" data-position-to="#share" data-arrow="t" class="ui-content"   style="max-width:350px;" style="display:none">
-                Tap here to remind others to read too
-                
-            </div>
+           
+           
 
             <!--Info displayed on first Visit-->
             <div data-role="popup" id="Info-i" data-position-to="#" data-arrow="t" class="ui-content" data-theme="a"  style="max-width:350px;" style="display:none">
@@ -78,7 +75,7 @@
             </div>
 
             <div data-role="popup" id="Info-ii" data-position-to="#translations" data-arrow="t" class="ui-content" data-theme="a"  style="max-width:350px;" style="display:none">
-              Tap <i class="fa fa-language"></i> to view translations of Suratul Kahf  <br>
+              Tap <i class="fa fa-language"></i> to view translations of Suratul Mulk   <br>
                 <a href="#"  onclick="closeTutorialii();setTimeout(function(){
               $('#Info-iii').popup();
               $('#Info-iii').popup('open');
@@ -87,7 +84,7 @@
             </div>
 
             <div data-role="popup" id="Info-iii" data-position-to="#share" data-arrow="t" class="ui-content" data-theme="a"  style="max-width:350px;" style="display:none">
-              Tap <i class="zmdi zmdi-notifications-active"></i> to remind others to read Suratul Kahf  <br>
+              Tap <i class="zmdi zmdi-notifications-active"></i> to remind others to read Suratul Mulk and Al-Sajdah <br>
                 <a href="#"  onclick="closeTutorialiii();setTimeout(function(){
               $('#Info-iv').popup();
               $('#Info-iv').popup('open');
@@ -126,7 +123,7 @@
  </div>
 
 
-
+<!--Scripts-->
 
   <script>
 
@@ -167,74 +164,24 @@ function openHelpDialog() {
                     $( this ).dialog( "close" );}}})};
   </script>
 
-  <script type="text/javascript"> 
-var day= new Date();
-var today= day.getDay();
 
-switch(today) {
-    case 4:
-
-$(document).ready(function(){
-   setTimeout(function(){
-     $('#popupInfo').popup();
-    $('#popupInfo').popup('open');
-   },500);setTimeout(function(){
-     closepopup()
-   },5000); // 5000 to load it after 5 seconds from page load
-});
-    
-    
-     
-
-
-function closepopup() {
-    $('#popupInfo').popup('close');
-};
-
-break;
-
-case 5:
-
-$(document).ready(function(){
-   setTimeout(function(){
-     $('#popupInfo').popup();
-    $('#popupInfo').popup('open');
-   },500);setTimeout(function(){
-     closepopup()
-   },5000); // 5000 to load it after 5 seconds from page load
-});
-    
-    
-     
-
-
-function closepopup() {
-    $('#popupInfo').popup('close');
-};
-
-break;
-
-   } 
-
-    
-          </script>
  
-<script src="css/jquery.js"></script>
-<script src="css/jquery.min.js"></script>
+
+<script src="js/jquery.min.js"></script>
 
 
-        <script src="css/jquery-ui.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
         
-        <script src="css/jquery.mobile.min.js"></script>
+        <script src="js/jquery.mobile.min.js"></script>
        
-<script src="css/jquery-ui.js"></script>
 
 
-        <script src="css/nativedroid2.js"></script>
-        <script src="css/nd2settings.js"></script>
 
-        <script src="css/swipe-page.js"></script>
-        <script src="css/share.js"></script>
+        <script src="js/nativedroid2.js"></script>
+        <script src="js/nd2settings.js"></script>
+
+        <script src="js/swipe-page.js"></script>
+        <script src="js/share.js"></script>
         
         
        
