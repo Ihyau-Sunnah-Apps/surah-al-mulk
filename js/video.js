@@ -56,7 +56,7 @@ type:'HEAD',
 error: function()
 {
     //file not exists
-function onMulkConfirm(buttonIndex) {
+function onSajdahConfirm(buttonIndex) {
   if (buttonIndex==1) {
 window.open('https://www.dropbox.com/s/rgdgmadl4wx6gpf/Surah%20Al-Sajdah.mp4?dl=1','_system')
 } else if (buttonIndex==2) {
