@@ -22,8 +22,7 @@ function setNotification() {
     title: 'Reminder to recite Suratul Mulk and Al-Sajdah',
     text: 'Tap here to read now',
     trigger:{
-    hour: hourInt,
-    minute: minuteInt
+    every: 1, unit: 'day', firstAt: every_night
         },
     icon: 'res://icon',
     smallIcon: 'res://ic_popup_reminder',
