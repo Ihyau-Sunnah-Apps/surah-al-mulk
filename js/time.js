@@ -7,14 +7,7 @@ function setNotification() {
     document.getElementById('night-time-set').style.color = 'black';
     document.getElementById('night-time-set').innerHTML = 'Success! Currently set to Every Night at ' + timeSet;
 
-    var night = new Date();
-    night.setDate(night.getDate());
-    var every =new Date();
-    every.setDate(night.getDate());
-    every.setHours(hourInt);
-    every.setMinutes(minuteInt);
-    every.setSeconds(0);
-    var every_night = new Date(every);
+    
 
 
   cordova.plugins.notification.local.schedule({
@@ -22,7 +15,10 @@ function setNotification() {
     title: 'Reminder to recite Suratul Mulk and Al-Sajdah',
     text: 'Tap here to read now',
     trigger:{
-    at: every_night, every: 'day'
+        every: {
+                    hour: hourInt,
+                    minute: minuteInt
+                }
         },
     icon: 'res://icon',
     smallIcon: 'res://ic_popup_reminder',
@@ -35,6 +31,7 @@ function setNotification() {
   cordova.plugins.notification.local.on("click", function (notification, state) {
         AdMob.hideBanner(); window.open('pages.html');
         }, this);
+        
   
 
         

@@ -37,6 +37,20 @@
             margin:0 4px;
             background: #ff0505;
         }
+
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
             </style>
 
     </head>
@@ -47,7 +61,7 @@
                 
                 <h1 class="wow fadeIn" data-wow-delay='0.4s'>Surah al Mulk & Al-Sajdah</h1>
                 
-                <a href="#notifications"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" id="notification" style="margin-right: 42px; visibility: visible; animation-delay: 1s; animation-name: fadeIn;"><i class='zmdi zmdi-notifications '></i></a>
+                <a href="#notifications"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" id="notification" style="margin-right: 42px; visibility: visible;"><i class='zmdi zmdi-notifications '></i></a>
                 <a href="#more"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"><i class='zmdi zmdi-more-horiz'></i></a>
                 <ul data-role="nd2tabs" data-swipe="true">
 
@@ -61,7 +75,7 @@
        
 
             <div data-role="nd2tab" data-tab="mulk">
-                <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
+                <div role="main" class="ui-content wow fadeIn" data-inset="false">
                    <ul data-role="listview" data-icon="false">
    
                         <li>
@@ -73,7 +87,7 @@
                         <li>
                         
                             <!--Plays the video file if downloaded/Streams it if not-->
-                            <a href="#" onclick="checkMulkFile(); return false;">
+                            <a href="#" onclick="checkMulkFile(); return false">
                                 <img src="icons/listen.jpg" class="ui-thumbnail ui-thumbnail-circular" />
                                 <br>Listen and Read Surah Al Mulk(Video)
                             </a>
@@ -160,7 +174,7 @@
                      <!--Popup for streaming the video-->
                     <div data-role="popup" id="popupsajdahvideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
 
-                        <iframe src="https://player.vimeo.com/video/64997729" width="200" height="298" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        
                         <p><a href="https://vimeo.com/64552532">Surah Al-Sajdah</a><br> from <a href="https://vimeo.com/user17555859">Al-Qur&aacute;n</a><br> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
                     </div>
@@ -252,6 +266,27 @@
                 Tap <i class="zmdi zmdi-notifications"></i> to manage notification reminders such as Suratul Mulk & Al-Sajdah reminders every night
          </div>
         </div>
+
+        <div data-role="page" id="videos" data-theme="b">
+
+            <div data-role="header"  data-position="fixed"  class="wow fadeIn" >
+                <a href="index.html"  class="ui-btn ui-btn-inline ui-btn-fab ui-btn-left" ><i class='zmdi zmdi-home'></i></a>
+                <h1 style="margin-left: 60px; visibility: visible;">Surah al Mulk & Al-Sajdah Video</h1>
+            </div>
+
+            <div role="main" class="ui-content wow fadeIn" data-inset="false">
+              
+                <div class="videoWrapper">
+                    <iframe id="surahVideo" width="560" height="349" src="https://player.vimeo.com/video/65565710" frameborder="0" allowfullscreen ></iframe>
+                </div>
+            </div>
+        </div>
+
+         
+
+
+                
+                
         <!--Scripts-->
        
         <script src="js/jquery.min.js"></script>
