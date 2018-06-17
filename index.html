@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/fonti-awesome.min.css" />
         <link rel="stylesheet" href="css/nativedroid2.css" />
         <link rel="stylesheet" href="css/nativedroid2.color.blue.css" />
+        <script type="text/javascript" src="cordova.js"></script>
         
         <style>
              /* Prevent FOUC */
@@ -70,9 +71,7 @@
                             </a>
                         </li>
                         <li>
-                            <div style="display: none">
-                                <input type="url" size="60" value="file:///storage/emulated/0/Download/Surah Al-Mulk.mp4" id="vidMulkUrl"  />
-                            </div>
+                        
                             <!--Plays the video file if downloaded/Streams it if not-->
                             <a href="#" onclick="checkMulkFile(); return false;">
                                 <img src="icons/listen.jpg" class="ui-thumbnail ui-thumbnail-circular" />
@@ -138,9 +137,7 @@
                             </a>
                         </li>
                         <li>
-                            <div style="display: none">
-                                <input type="url" size="60" value="file:///storage/emulated/0/Download/Surah Al-Sajdah.mp4" id="vidSajdahUrl"  />
-                            </div>
+                           
                             <!--Plays the video file if downloaded/Streams it if not-->
                             <a href="#" onclick="checkSajdahFile(); return false;">
                                 <img src="icons/listen.jpg" class="ui-thumbnail ui-thumbnail-circular" />
@@ -212,7 +209,7 @@
             </div>
             <div data-role="popup" id="notifications" >
                 <div data-role="header">
-                    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+                    <a href="#" data-rel="back"  class="ui-btn ui-btn-inline ui-btn-right"><i class="zmdi zmdi-close-circle"></i></a>
                     <h1 class='nd-title'>Manage Notifications:</h1>
                 </div>
                 <h5>Tick to enable untick to disable</h5>
@@ -309,16 +306,10 @@
         <script src="js/time.js"></script>
         <script src="js/video.js"></script>
         <script src="js/share.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
         <script src="js/nativedroid2.js"></script>
         <script src="js/nd2settings.js"></script>
         <script src="js/checkbox.js"></script>
-        <script type="text/javascript">
-      window.onerror = function(msg, url, linenumber) {
-    alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
-    return true;
-}
-  </script>
+        
     </body>
 </html>
 

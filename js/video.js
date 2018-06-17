@@ -26,7 +26,7 @@ window.open('https://www.dropbox.com/s/q66huz20rjzxasg/Surah%20Al-Mulk.mp4?dl=1'
 };
 navigator.notification.confirm(
     'Would you like to download the file so as its available offline next time or Just play without downloading?', // message
-     onConfirm,            // callback to invoke with index of button pressed
+     onMulkConfirm,            // callback to invoke with index of button pressed
     'Download/Play (Abdurrahman As-Sudais)',           // title
     ['Download (12.2MB)','Play without downloading']     // buttonLabels
 );
@@ -34,7 +34,7 @@ navigator.notification.confirm(
 success: function()
 {
     //file exists
-window.plugins.toast.showLongBottom('Starting player please wait...', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});playVideo(document.getElementById("vidMulkUrl").value);
+window.plugins.toast.showLongBottom('Starting player please wait...'); window.plugins.streamingMedia.playVideo("file:///storage/emulated/0/Download/Surah Al-Mulk.mp4");
 }
 });
 
@@ -68,7 +68,7 @@ window.open('https://www.dropbox.com/s/rgdgmadl4wx6gpf/Surah%20Al-Sajdah.mp4?dl=
 };
 navigator.notification.confirm(
     'Would you like to download the file so as its available offline next time or Just play without downloading?', // message
-     onConfirm,            // callback to invoke with index of button pressed
+     onSajdahConfirm,            // callback to invoke with index of button pressed
     'Download/Play (Abdurrahman As-Sudais)',           // title
     ['Download (11.3MB)','Play without downloading']     // buttonLabels
 );
@@ -76,7 +76,7 @@ navigator.notification.confirm(
 success: function()
 {
     //file exists
-window.plugins.toast.showLongBottom('Starting player please wait...', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});playVideo(document.getElementById("vidSajdahUrl").value);
+window.plugins.toast.showLongBottom('Starting player please wait...'); window.plugins.streamingMedia.playVideo("file:///storage/emulated/0/Download/Surah Al-Sajdah.mp4");
 }
 });
 
