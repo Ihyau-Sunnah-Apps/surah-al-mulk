@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://iframe url">
         <title>Surah Al Mulk & Al-Sajdah</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -118,7 +119,7 @@
                         </li>
                     </ul>
                     <!--Popup for streaming Mulk video-->
-                    <div data-role="popup" id="popupmulkvideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
+                    <div data-role="popup" id="popupmulkvideo" data-overlay-theme="a" data-tolerance="15,15" class="ui-content" data-theme="b">
 
                         <iframe src="https://player.vimeo.com/video/65565710" width="200" height="298" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         <p><a href="https://vimeo.com/64552532">Surah Al-Mulk</a><br> from <a href="https://vimeo.com/user17555859">Al-Qur&aacute;n</a><br> on <a href="https://vimeo.com">Vimeo</a>.</p>
@@ -153,7 +154,7 @@
                         <li>
                            
                             <!--Plays the video file if downloaded/Streams it if not-->
-                            <a href="#" onclick="checkSajdahFile(); return false;">
+                            <a href="#" onclick='checkSajdahFile(); return false;'>
                                 <img src="icons/listen.jpg" class="ui-thumbnail ui-thumbnail-circular" />
                                 <br>Listen and Read Surah Al Sajdah(Video)
                             </a>
@@ -172,10 +173,10 @@
                         </li>
                     </ul>
                      <!--Popup for streaming the video-->
-                    <div data-role="popup" id="popupsajdahvideo" data-overlay-theme="a" data-theme="d" data-tolerance="15,15" class="ui-content">
+                    <div data-role="popup" id="popupsajdahvideo" data-overlay-theme="a" data-theme="b"  data-tolerance="15,15" class="ui-content">
 
-                        
-                        <p><a href="https://vimeo.com/64552532">Surah Al-Sajdah</a><br> from <a href="https://vimeo.com/user17555859">Al-Qur&aacute;n</a><br> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                        <iframe src="https://player.vimeo.com/video/64997729" width="200" height="298" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <p><a href="https://vimeo.com/64997729">Surah Al-Sajdah</a><br> from <a href="https://vimeo.com/user17555859">Al-Qur&aacute;n</a><br> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
                     </div>
 
@@ -267,26 +268,6 @@
          </div>
         </div>
 
-        <div data-role="page" id="videos" data-theme="b">
-
-            <div data-role="header"  data-position="fixed"  class="wow fadeIn" >
-                <a href="index.html"  class="ui-btn ui-btn-inline ui-btn-fab ui-btn-left" ><i class='zmdi zmdi-home'></i></a>
-                <h1 style="margin-left: 60px; visibility: visible;">Surah al Mulk & Al-Sajdah Video</h1>
-            </div>
-
-            <div role="main" class="ui-content wow fadeIn" data-inset="false">
-              
-                <div class="videoWrapper">
-                    <iframe id="surahVideo" width="560" height="349" src="https://player.vimeo.com/video/65565710" frameborder="0" allowfullscreen ></iframe>
-                </div>
-            </div>
-        </div>
-
-         
-
-
-                
-                
         <!--Scripts-->
        
         <script src="js/jquery.min.js"></script>

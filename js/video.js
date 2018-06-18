@@ -18,7 +18,7 @@ function onMulkConfirm(buttonIndex) {
   if (buttonIndex==1) {
 window.open('https://www.dropbox.com/s/q66huz20rjzxasg/Surah%20Al-Mulk.mp4?dl=1','_system')
 } else if (buttonIndex==2) {
- window.location.href = "index.html#videos";
+ $("#popupmulkvideo").popup("open");
  
 } else {
 
@@ -61,8 +61,7 @@ function onSajdahConfirm(buttonIndex) {
   if (buttonIndex==1) {
 window.open('https://www.dropbox.com/s/rgdgmadl4wx6gpf/Surah%20Al-Sajdah.mp4?dl=1','_system')
 } else if (buttonIndex==2) {
- window.location.href = "index.html#videos";
-  document.getElementById('surahVideo').src="https://player.vimeo.com/video/64997729";
+ $("#popupsajdahvideo").popup("open");
 } else {
 
 };

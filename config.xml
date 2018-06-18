@@ -94,6 +94,8 @@
 <access origin="http://facebook.com" />
 <access origin="https//pushbots.com" />
 <allow-navigation href="http://*/*" />
+<allow-navigation href="https://player.vimeo.com/video/64997729" />
+<allow-navigation href="https://player.vimeo.com/video/65565710" />
 <allow-intent href="https://*/*" />
 <allow-intent href="http://*/*" />
 <allow-intent href="*" />
