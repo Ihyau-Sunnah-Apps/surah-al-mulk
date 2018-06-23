@@ -18,7 +18,7 @@ function onMulkConfirm(buttonIndex) {
   if (buttonIndex==1) {
 window.open('https://www.dropbox.com/s/q66huz20rjzxasg/Surah%20Al-Mulk.mp4?dl=1','_system')
 } else if (buttonIndex==2) {
- $("#popupmulkvideo").popup("open");
+ window.plugins.videoPlayer.play("https://player.vimeo.com/video/65565710");
  
 } else {
 
