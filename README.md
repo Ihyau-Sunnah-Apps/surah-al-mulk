@@ -1,4 +1,7 @@
 # Surah-al-Mulk and Al-Sajdah Android App.
+
+<img src=https://build.phonegap.com/apps/1250269/badge/2820550716/version.svg />      <img src=https://build.phonegap.com/apps/1250269/badge/2820550716.svg />      <img src=https://build.phonegap.com/apps/1250269/badge/2820550716/android.svg />
+
 An android app that helps you to read Suratul Mulk and Al Sajdah and learn more about the chapters.
 Link To App (Google Play Store):- https://play.google.com/store/apps/details?id=com.ihyausunnah.surahalmulk
 
