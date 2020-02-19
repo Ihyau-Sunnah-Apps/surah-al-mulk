@@ -270,9 +270,14 @@
                     </form>
                 </div>
             </div>
-            <div data-role="popup" id="popupInfo" data-position-to="#notification" data-arrow="t" class="ui-content" data-theme="b"  style="max-width:350px;" style="display:none">
+            <div data-role="popup" id="popupInfo" data-position-to="#notification" data-arrow="t" class="ui-content" data-theme="a"  style="max-width:350px;" style="display:none">
                 Tap <i class="zmdi zmdi-notifications"></i> to manage notification reminders such as Suratul Mulk & Al-Sajdah reminders every night
-         </div>
+                <br>
+                <a href="#" onclick="closepopup()"  style="color: aqua;" class="ui-btn ui-btn-inline ui-btn-fab">Got It</a>
+            </div>
+            <div data-role="popup" id="darkThemeInfo" data-position-to="#night-mode" data-arrow="t" class="ui-content" data-theme="b"  style="max-width:350px;" style="display:none">
+                    Tap <i class="fa fa-moon-o"></i> to toggle dark theme
+                </div>
         </div>
 
         <!--Scripts-->
@@ -292,16 +297,15 @@
   <script type="text/javascript">
     //Checks if its the user's first time an displays a welcome screen
     function welcomeScreen(){
-        var welcome = window.localStorage.getItem("welcomeNew");
+        var welcome = window.localStorage.getItem("welcome1.0.7");
          if(!welcome){
-            window.localStorage.setItem("welcomeNew", "1");
+            window.localStorage.setItem("welcome1.0.7", "1");
             $(document).ready(function(){
    setTimeout(function(){
      $('#popupInfo').popup();
     $('#popupInfo').popup('open');
-   },500);setTimeout(function(){
-     closepopup()
-   },5000); // 5000 to load it after 5 seconds from page load
+   },5000);
+
 });
     
     
@@ -313,7 +317,15 @@
 
      }
       function closepopup() {
-    $('#popupInfo').popup('close');
+        $('#popupInfo').popup('close');
+        setTimeout(function(){
+     $('#darkThemeInfo').popup();
+    $('#darkThemeInfo').popup('open');
+   },1000);
+      setTimeout(function(){
+        $('#darkThemeInfo').popup('close');
+   },6000); 
+
 }; 
     
 </script>
@@ -324,7 +336,7 @@
         var e = document.getElementById(id);
         e.style.display = (e.style.display == 'block') ? 'none' : 'block';
      }
-                            
+                       
   </script>
 
   
