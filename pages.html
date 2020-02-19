@@ -183,6 +183,13 @@ function openHelpDialog() {
 
         <script src="js/swipe-page.js"></script>
         <script src="js/share.js"></script>
+        <script>
+           //Invert the quran image to simulate night mode
+          if( localStorage.getItem('theme') == 'b' ) {
+            $('head').append('<style>img {-webkit-filter: invert(1); filter: invert(1);}</style>');
+          }
+        
+        </script>
         
         
        

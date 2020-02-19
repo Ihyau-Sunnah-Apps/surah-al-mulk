@@ -57,12 +57,12 @@
 
     </head>
     <body>
-        <div data-role="page" id="homepage" class="nd2-no-menu-swipe">
+        <div data-role="page"  id="homepage" class="nd2-no-menu-swipe">
 
             <div data-role="header"  data-position="fixed"  class="wow fadeIn" >
                 
                 <h1 class="wow fadeIn" data-wow-delay='0.4s'>Surah al Mulk & Al-Sajdah</h1>
-                <a href="market://details?id=com.ihyausunnah.surahalmulk" onclick="window.open(this.href,'_system'); return false;" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"  style="margin-right: 84px; visibility: visible; "><i style="color: yellow" class="zmdi zmdi zmdi-star animated finite flash zmdi-hc-fw"></i></a>
+                <a href="#" onclick="activateNightMode();" id="night-mode" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"  style="margin-right: 80px; visibility: visible; "><i class="fa fa-moon-o"></i></a>
                 <a href="#notifications"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right" id="notification" style="margin-right: 42px; visibility: visible;"><i class='zmdi zmdi-notifications '></i></a>
                 <a href="#more"  data-rel="popup" class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"><i class='zmdi zmdi-more-horiz'></i></a>
                 <ul data-role="nd2tabs" data-swipe="true">
@@ -229,7 +229,7 @@
 
                 </div>
             </div>
-            <div data-role="popup" id="notifications" >
+            <div data-role="popup"  id="notifications" >
                 <div data-role="header">
                     <a href="#" data-rel="back"  class="ui-btn ui-btn-inline ui-btn-right"><i class="zmdi zmdi-close-circle"></i></a>
                     <h1 class='nd-title'>Manage Notifications:</h1>
@@ -335,6 +335,7 @@
         <script src="js/nativedroid2.js"></script>
         <script src="js/nd2settings.js"></script>
         <script src="js/checkbox.js"></script>
+        <script src="js/theme.js"></script>
         
     </body>
 </html>
