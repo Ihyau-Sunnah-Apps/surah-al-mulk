@@ -1,9 +1,11 @@
+var surahIndex;
+var tagName;
 //Add ayah images to trans.html
 function addImages() {
-    var i, allImages ="";
+    var i, allImages ="", index = surahIndex + 1;
     //Loop through all ayah images
     for (i = 1; i<=30; i++) {
-        allImages += "<strong><p class='ayah'><img class='center fit' src='images/67_" + i + ".png'/></p></strong><br>";
+        allImages += "<strong><p class='ayah'><img class='center fit' src='images/" + index + "_" + i + ".png'/></p></strong><br>";
     }
     //Adds allImages to <div id="trans-container"/>
     document.getElementById("trans-container").innerHTML = allImages;
@@ -15,7 +17,6 @@ function addImages() {
         idCount++;
     });
 }
-addImages();
 
 //Loads content according to the language which is passed as a parameter
 function loadContent(trans, nameOfTranslator) {
@@ -33,12 +34,12 @@ function loadContent(trans, nameOfTranslator) {
         var x, i, xmlDoc, txt, id;
         xmlDoc = xml.responseXML;
         txt = "";
-        x = xmlDoc.getElementsByTagName('ayam'); //Get all 'aya' tags in xml file
+        x = xmlDoc.getElementsByTagName(tagName); //Get all 'aya' tags in xml file
         //Loop through the tags and store them in var txt
         for (i = 1 ; i <x.length; i++) {
             id = "ayah" + i;
             txt = "<br>\n" + nameOfTranslator + ":<br>\n["+ x[i].getAttribute('index') + "] " + x[i].getAttribute('text') + "<br>\n";
-            document.getElementById(id).innerHTML += txt
+            document.getElementById(id).innerHTML += txt;
         }
     }
 };
@@ -57,8 +58,8 @@ function addArabicVerse() {
     function getTheAyah(xml) {
         var x, i,j, xmlDoc, ayah = [];
         xmlDoc = xml.responseXML;
-        x = xmlDoc.getElementsByTagName('sura')[66]; //Get Suratul Mulk in xml file
-        for (j = 0 ; j <110; j++) {
+        x = xmlDoc.getElementsByTagName('sura')[surahIndex]; //Get Suratul Mulk in xml file
+        for (j = 0 ; j < 30; j++) {
             i = x.getElementsByTagName('aya')[j];
             ayah[j] = "["+ i.getAttribute('index') + "] " + i.getAttribute('text');
         }
@@ -80,8 +81,8 @@ $(document).on("pagecreate","#mulk-translations",function(){
         var ayahNumber = id.substring(4);
         var ayahNumberInt =parseInt(ayahNumber) - 1;
         var allAyahs = document.querySelectorAll("img");
-        var fullAyah = allAyahs[ayahNumberInt].alt + "\n" + $("#" + id).text() + "\n\nSent from Surah Al Kahf App\nHave a look at Surah Al Kahf App Link:";
-        window.plugins.socialsharing.share(fullAyah, null, null, 'http://bit.ly/kahfapp');
+        var fullAyah = allAyahs[ayahNumberInt].alt + "\n" + $("#" + id).text() + "\n\nSent from Surah Al Mulk & Al-Sajdah App\nHave a look at Surah Al Mulk & Al-Sajdah App Link:";
+        window.plugins.socialsharing.share(fullAyah, null, null, 'http://bit.ly/mulk-app');
 
     });
 });

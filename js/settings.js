@@ -4,7 +4,8 @@ var success = "is successfully added to the translation";
 $(function() {
     $(":checkbox").change(function(){
         if ($(this).is(":checked")) {
-            loadContent("Trans/" + this.id + ".xml",$(this).attr("name")); localStorage.setItem(this.id, "Trans/" + this.id + ".xml");window.plugins.toast.showLongBottom($(this).attr("id") +" " + success);
+            loadContent("Trans/" + this.id + ".xml",$(this).attr("name")); localStorage.setItem(this.id, "Trans/" + this.id + ".xml");
+            window.plugins.toast.showLongBottom($(this).parent().text().trim() +" " + success);
         }
         else {
             localStorage.removeItem(this.id);

@@ -1,141 +1,247 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
+
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-    
-    <link rel="stylesheet" href="css/jquery.mobile.min.css" />
-    
-    <link rel="stylesheet" href="css/nativedroid21.css" />
-    <link rel="stylesheet" href="css/font-awesome
-.css">
- 
-    
-        <style>
-          /* Prevent FOUC */
-          body { opacity: 0; }
-        </style>
-<style>
-* {
-  padding: 0;
-  margin: 0;
-}
-.fit {
-  max-width: 100%;
-  max-height: 100%;
-}
-.center {
-  display: block;
-  margin: auto;
-}
-</style>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 
-  </head>
-  <body>
+  <link rel="stylesheet" href="css/jquery.mobile.min.css" />
 
-<div data-role="page"  id="sajdah-translations"  class="nd2-no-menu-swipe">
+  <link rel="stylesheet" href="css/nativedroid21.css" />
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <script type="text/javascript" src="cordova.js"></script>
+
+  <style>
+    /* Prevent FOUC */
+    body {
+      opacity: 0;
+    }
+  </style>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .fit {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .center {
+      display: block;
+      margin: auto;
+    }
+  </style>
 
 
-      
-      <div data-role="header" data-theme="b" data-position="fixed" class="wow fadeIn">
-        <a href="pages.html#sajdah-pages" class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i class='zmdi zmdi-home'></i></a>
+</head>
 
-        <h1 class="wow fadeIn" id = "heading" data-wow-delay='0.4s'>Translation</h1>
-        
-        
-
-</div>
-
-      <div role="main" class="ui-content wow fadeIn" data-inset="false" data-wow-delay="0.2s">
-<a href="#settings" data-rel="popup" class="ui-btn clr-btn-blue" >View in another Language</a><br>
-<br>
+<body>
 
 
-<div id="trans-container"></div>
-     
+  <div data-role="page" id="mulk-translations" class="nd2-no-menu-swipe">
 
-<div data-role="popup"  id="settings">
-  <div data-role="header" data-theme="b">
-    <h1 class='nd-title'>Select another language</h1>
+
+    <div data-role="header" data-theme="b" data-position="fixed"
+      class="wow fadeIn">
+      <a href="pages.html#sajdah-pages" class="ui-btn ui-btn-inline ui-btn-fab"
+        data-ajax="false"><i class='fa fa-arrow-left'></i></a>
+
+      <h1 class="wow fadeIn" id="heading" data-wow-delay='0.4s'>Translation</h1>
+      <a href="#" onclick="activateNightMode();"
+        class="ui-btn ui-btn-inline ui-btn-fab ui-btn-right"><i
+          class="fa fa-moon-o"></i></a>
+    </div>
+
+    <div role="main" class="ui-content wow fadeIn" data-inset="false"
+      data-wow-delay="0.2s">
+      <div id="tip">
+        <h6><b style="color: blue">Tip <i class="zmdi fa fa-lightbulb-o"
+              style="text-shadow: 1px 1px 1px #fcef00"></i>: </b>Hold/Long tap
+          an ayah to share the ayah with others</h6>
+      </div>
+      <br id="brTip">
+      <a href="#settings" data-rel="popup" class="ui-btn clr-btn-blue">View in
+        another Language</a><br>
+      <br>
+      <!--This div will be populated by contents from trans.js and it contains all the translations but only one is displayed as per the user choice-->
+      <div id="trans-container"></div>
+      <div data-role="popup" id="settings">
+        <div data-role="header" data-theme="b">
+          <h1 class='nd-title'>Select another language</h1>
+          <a href="#" data-rel="back"
+            class="ui-btn ui-btn-inline ui-btn-right"><i
+              class="zmdi zmdi-close-circle"></i></a>
+        </div>
+
+        <div data-role="content">
+          <div id="transTip"><b style="color: blue">Tip <i
+                class="zmdi fa fa-lightbulb-o"
+                style="text-shadow: 1px 1px 1px #fcef00"></i>: </b>Check all the
+            translations you would like to view. </div>
+          <div id="trans-checkbox-container">
+            <form>
+              <fieldset data-role="controlgroup">
+                <label>
+                  <input type="checkbox" name="Saheeh International"
+                    checked="true" id="ensahih">English(Sahih International)
+                </label>
+                <label>
+                  <input type="checkbox"
+                    name="Muhammad Taqi-ud-Din al-Hilali and Muhammad Muhsin Khan"
+                    id="enhilali">English(Muhsin Khan)
+                </label>
+                <label>
+                  <input type="checkbox" name="تفسير المیسر"
+                    id="armuyassar">Arabic Muyassar
+                </label>
+                <label>
+                  <input type="checkbox" name="Muhammad Hamidullah"
+                    id="frhamidullah">French
+                </label>
+                <label>
+                  <input type="checkbox" name="Bubenheim & Elyas"
+                    id="debubenheim">German
+                </label>
+                <label>
+                  <input type="checkbox" name="Abubakar Mahmoud Gumi"
+                    id="hagumi">hausa
+                </label>
+                <label>
+                  <input type="checkbox"
+                    name="Suhel Farooq Khan and Saifur Rahman Nadwi"
+                    id="hihindi">Hindi
+                </label>
+                <label>
+                  <input type="checkbox" name="Bahasa Indonesia"
+                    id="idindonesian">Indonesian
+                </label>
+                <label>
+                  <input type="checkbox" name="Abdullah Muhammad Basmeih"
+                    id="msbasmeih">Malay
+                </label>
+                <label>
+                  <input type="checkbox"
+                    name="Cheriyamundam Abdul Hameed and Kunhi Mohammed Parappoor"
+                    id="mlabdulhameed">Malayalam
+                </label>
+                <label>
+                  <input type="checkbox" name="Einar Berg" id="noberg">Norwegian
+                </label>
+                <label>
+                  <input type="checkbox" name="Elmir Kuliev"
+                    id="rukuliev">Russian
+                </label>
+                <label>
+                  <input type="checkbox" name="Mahmud Muhammad Abduh"
+                    id="soabduh">Somali
+                </label>
+                <label>
+                  <input type="checkbox" name="Muhammad Isa García"
+                    id="esgarcia">Spanish
+                </label>
+                <label>
+                  <input type="checkbox" name=" Ali Muhsin Al-Barwani"
+                    id="swbarwani">Swahili
+                </label>
+                <label>
+                  <input type="checkbox" name="Jan Turst Foundation"
+                    id="tatamil">Tamil
+                </label>
+                <label>
+                  <input type="checkbox" name="Muhammad Junagarhi"
+                    id="urjunagarhi">Urdu
+                </label>
+
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Info displayed on first Visit-->
+    <div data-role="popup" id="Info" data-position-to="#ayah1" data-arrow="t"
+      class="ui-content" data-theme="a" style="max-width:350px;"
+      style="display:none">
+      <h4>New</h4>
+      Hold/Long tap an ayah to share the ayah with others<br>
+
+    </div>
+
   </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/theme.js"></script>
 
-  <div data-role="content" data-theme="b">
-    <div id="radio-container">
-      <form>
-      <fieldset data-role="controlgroup">
-    <legend>Select another language</legend>
-    <input type="radio" name="radio-choice-1" id="en-sahih" value="choice-1"  checked="checked">
-    <label for="en-sahih">English(Sahih International)</label>
-    <input type="radio" name="radio-choice-1" id="en-khan" value="choice-2">
-    <label for="en-khan">English(Muhsin Khan)</label>
-    <input type="radio" name="radio-choice-1" id="ar-muyassar" value="choice-3">
-    <label for="ar-muyassar">Arabic Muyassar</label>
-    <input type="radio" name="radio-choice-1" id="french" value="choice-4">
-    <label for="french">French</label>
-    <input type="radio" name="radio-choice-1" id="german" value="choice-4">
-    <label for="german">German</label>
-    <input type="radio" name="radio-choice-1" id="hausa" value="choice-4">
-    <label for="hausa">Hausa</label>
-    <input type="radio" name="radio-choice-1" id="hindi" value="choice-4">
-    <label for="hindi">Hindi</label>
-    <input type="radio" name="radio-choice-1" id="indonesia" value="choice-4">
-    <label for="indonesia">Indonesian</label>
-    <input type="radio" name="radio-choice-1" id="malay" value="choice-4">
-    <label for="malay">Malay</label>
-    <input type="radio" name="radio-choice-1" id="malayalam" value="choice-4">
-    <label for="malayalam">Malayalam</label>
-    <input type="radio" name="radio-choice-1" id="norsk" value="choice-4">
-    <label for="norsk">Norwegian</label>
-    <input type="radio" name="radio-choice-1" id="russian" value="choice-4">
-    <label for="russian">Russian</label>
-    <input type="radio" name="radio-choice-1" id="somali" value="choice-4">
-    <label for="somali">Somali</label>
-    <input type="radio" name="radio-choice-1" id="spanish" value="choice-4">
-    <label for="spanish">Spanish</label>
-    <input type="radio" name="radio-choice-1" id="swahili" value="choice-4">
-    <label for="swahili">Swahili</label>
-    <input type="radio" name="radio-choice-1" id="tamil" value="choice-4">
-    <label for="tamil">Tamil</label>
-    <input type="radio" name="radio-choice-1" id="urdu" value="choice-4">
-    <label for="urdu">Urdu</label>
-    
-</fieldset>
-</form>
-  </div>
-</div>
-</div>
-
-
-
-
-
-
-</div>
-</div>
-
-  
-
-
-<script src="js/jquery.min.js"></script>
-  <script src="js/sajdahtrans.js"></script>
-  <script src="js/settings.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.mobile.min.js"></script>
-    <script type="text/javascript">
-    loadContent (localStorage.getItem('lang'));
-  </script>
-    <script src="js/nativedroid2.js"></script>
-    <script src="js/nd2settings.js"></script>
-    <script>
-      if( localStorage.getItem('theme') == 'b' ) {
-          document.getElementById('sajdah-translations').setAttribute('data-theme', 'b');
-          $('head').append('<style>img {-webkit-filter: invert(1); filter: invert(1);}</style>');
-      } 
-    </script>
-    <script type="text/javascript" src="cordova.js"></script>
+  <script src="js/jquery.mobile.min.js"></script>
 
-  </body>
+  <script src="js/nativedroid2.js"></script>
+  <script src="js/trans.js"></script>
+  <script src="js/settings.js"></script>
+  <script type="text/javascript">
+    surahIndex = 31;
+    tagName = 'aya';
+    //Invert the quran image to simulate night mode
+    if (localStorage.getItem('theme') == 'b') {
+      document.getElementById('mulk-translations').setAttribute('data-theme',
+        'b');
+      document.getElementById('settings').setAttribute('data-theme', 'b');
+      document.getElementById('Info').setAttribute('data-theme', 'b');
+      $('head').append(
+        '<style>img {-webkit-filter: invert(1); filter: invert(1);}</style>');
+    }
+
+    function retrieveContent() {
+      addImages();
+      $("input:checkbox").each(function () {
+        if ($(this).is(":checked")) {
+          loadContent(localStorage.getItem($(this).attr("id")), $(this)
+            .attr("name"));
+        }
+      });
+
+    }
+    retrieveContent();
+
+    //Checks if its the user's first time and displays a tutorial screen
+    function tutorialScreen() {
+      var transTutorial = window.localStorage.getItem("transTutorial");
+      if (!transTutorial) {
+        window.localStorage.setItem("transTutorial", "1");
+        $(document).ready(function () {
+          setTimeout(function () {
+            $('#Info').popup();
+            $('#Info').popup('open');
+          }, 5000); // 5000 to load it after 5 seconds from page load
+          setTimeout(function () {
+            closePopup();
+          }, 12000); // 7000 to close it after 7 seconds after appearing
+        });
+
+
+      }
+
+    }
+
+    function closePopup() {
+      $('#Info').popup('close');
+    }
+    tutorialScreen();
+    $(function () {
+      setTimeout(function () {
+        $('#tip').remove();
+        $('#brTip').remove();
+
+      }, 30000); // <-- time in milliseconds
+    });
+  </script>
+  <script src="js/nd2settings.js"></script>
+
+</body>
+
 </html>
