@@ -71,14 +71,33 @@
          />
        
     <!-- Define app icon for each platform. -->
-    <icon src="icon.png" />
+    <platform name="android">
+        <!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+        <icon src="res/android/drawable-ldpi-icon.png" density="ldpi" />
+        <icon src="res/android/drawable-mdpi-icon.png" density="mdpi" />
+        <icon src="res/android/drawable-hdpi-icon.png" density="hdpi" />
+        <icon src="res/android/drawable-xhdpi-icon.png" density="xhdpi" />
+        <icon src="res/android/drawable-xxhdpi-icon.png" density="xxhdpi" />
+        <icon src="res/android/drawable-xxxhdpi-icon.png" density="xxxhdpi" />
+    </platform>
     
     <!-- Define app splash screen for each platform. -->
     <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+    
         <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
         <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
         <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
         <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi"/>
+        <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi"/>
     </platform>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
