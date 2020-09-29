@@ -15,5 +15,6 @@ function activateNightMode() {
     if( localStorage.getItem('theme') == 'b' ) {
         document.getElementById('homepage').setAttribute('data-theme', 'b');
         document.getElementById('notifications').setAttribute('data-theme', 'b');
+        document.getElementById('update').style = "background-color: green; display: none;"
     
     } 

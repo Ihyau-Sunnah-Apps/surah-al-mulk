@@ -95,6 +95,38 @@
 
         <div data-role="nd2tab" data-tab="mulk">
             <div role="main" class="ui-content wow fadeIn" data-inset="false">
+                
+                <div id="update" class="nd2-card card-media-right card-media-small" style="background-color: yellow; display: none;">
+
+
+                    <div class="card-media">
+                        <img src="icon.png">
+                    </div>
+
+                    <div class="card-title has-supporting-text">
+                        <h3 class="card-primary-title">Important Info</h3>
+                        <h5 class="card-subtitle">Assalam alaykum,</h5>
+                    </div>
+
+                    <div class="card-supporting-text has-action has-title">
+                        Due to unavoidable circumstances, support for this app has <strong>ended.</strong> We recommend <strong>updating to the new and improved version of the app</strong> using the button below. <br><br>
+                        Thanks for your continued support and sorry for any inconvenience caused.
+                    </div>
+
+                    <div class="card-action">
+                        <div class="row between-xs">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <a href="market://details?id=com.thesunnahrevival.surahalmulk" class="ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button">Download New App</a>
+                                    <a href="#" onclick="document.getElementById('update').style.display = 'none'" class="ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button">Remind Later</a>
+                                    <a href="https://thesunnahrevival.com/?p=3143" class="ui-btn ui-btn-inline waves-effect waves-button waves-effect waves-button" onclick="window.open(this.href,'_system');  return false;">Read Full blog post</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <ul data-role="listview" data-icon="false">
 
                     <li>
@@ -278,7 +310,7 @@
 
             <div data-role="content">
                 <a href="#"
-                    onclick="window.plugins.socialsharing.share('Have a look at Surah Al Mulk & Al-Sajdah App \n\n', null, null, 'http://bit.ly/mulk-app'); return false;"
+                    onclick="window.plugins.socialsharing.share('Have a look at Surah Al Mulk & Al-Sajdah App \n\n', null, null, 'https://rebrand.ly/mulk-app'); return false;"
                     data-role="button" data-inline="true"
                     class="ui-btn ui-btn-primary"> Share App</a>
                 <a href="benefits.html#about" data-role="button"
@@ -317,7 +349,7 @@
                     onclick="window.open(this.href,'_system'); return false;"
                     class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i
                         class='fa fa-instagram'></i></a>
-                <a href="https://github.com/saidmsaid81/surah-al-mulk"
+                <a href="https://rebrand.ly/suratul-mulk-repo"
                     onclick="window.open(this.href,'_system'); return false;"
                     class="ui-btn ui-btn-inline ui-btn-fab" data-ajax="false"><i
                         class='fa fa-github'></i></a>
@@ -398,39 +430,6 @@
 
     <script type="text/javascript">
         localStorage.setItem('ensahih', 'Trans/ensahih.xml');
-        //Checks if its the user's first time an displays a welcome screen
-        function welcomeScreen() {
-            var welcome = window.localStorage.getItem("welcome1.0.7");
-            if (!welcome) {
-                window.localStorage.setItem("welcome1.0.7", "1");
-                $(document).ready(function () {
-                    setTimeout(function () {
-                        $('#popupInfo').popup();
-                        $('#popupInfo').popup('open');
-                    }, 5000);
-
-                });
-
-
-
-
-
-
-            }
-
-        }
-
-        function closepopup() {
-            $('#popupInfo').popup('close');
-            setTimeout(function () {
-                $('#darkThemeInfo').popup();
-                $('#darkThemeInfo').popup('open');
-            }, 1000);
-            setTimeout(function () {
-                $('#darkThemeInfo').popup('close');
-            }, 6000);
-
-        };
     </script>
     <script type="text/javascript">
         function showhide(id) {
