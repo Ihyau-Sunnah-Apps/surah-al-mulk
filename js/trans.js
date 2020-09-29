@@ -82,7 +82,7 @@ $(document).on("pagecreate","#mulk-translations",function(){
         var ayahNumberInt =parseInt(ayahNumber) - 1;
         var allAyahs = document.querySelectorAll("img");
         var fullAyah = allAyahs[ayahNumberInt].alt + "\n" + $("#" + id).text() + "\n\nSent from Surah Al Mulk & Al-Sajdah App\nHave a look at Surah Al Mulk & Al-Sajdah App Link:";
-        window.plugins.socialsharing.share(fullAyah, null, null, 'http://bit.ly/mulk-app');
+        window.plugins.socialsharing.share(fullAyah, null, null, 'https://rebrand.ly/mulk-app');
 
     });
 });
