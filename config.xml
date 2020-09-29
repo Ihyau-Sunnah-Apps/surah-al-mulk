@@ -80,10 +80,18 @@
     <platform name="android">
         <!-- you can use any density that exists in the Android project -->
     
-         <splash src="res/screen/android/drawable-port-hdpi-screen.png" density="port-hdpi"/>
-            <splash src="res/screen/android/drawable-port-ldpi-screen.png" density="port-ldpi"/>
-            <splash src="res/screen/android/drawable-port-mdpi-screen.png" density="port-mdpi"/>
-            <splash src="res/screen/android/drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
+        <splash src="res/screen/android/drawable-port-hdpi-screen.png" density="port-hdpi"/>
+        <splash src="res/screen/android/drawable-port-ldpi-screen.png" density="port-ldpi"/>
+        <splash src="res/screen/android/drawable-port-mdpi-screen.png" density="port-mdpi"/>
+        <splash src="res/screen/android/drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
+        <splash src="res/screen/android/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
+        <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
+        <splash src="res/screen/android/drawable-port-hdpi-screen.png" density="hdpi"/>
+        <splash src="res/screen/android/drawable-port-ldpi-screen.png" density="ldpi"/>
+        <splash src="res/screen/android/drawable-port-mdpi-screen.png" density="mdpi"/>
+        <splash src="res/screen/android/drawable-port-xhdpi-screen.png" density="xhdpi"/>
+        <splash src="res/screen/android/drawable-port-xxhdpi-screen.png" density="xxhdpi"/>
+        <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png" density="xxxhdpi"/>
     </platform>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
