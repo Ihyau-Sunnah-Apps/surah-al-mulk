@@ -1,5 +1,9 @@
 # Surah-al-Mulk and Al-Sajdah Android App.
 
+# Important
+
+**Support for this app has ended and a new and improved app will be released soon in shaa Allah. The Repo is now archived**
+
 <img src=https://build.phonegap.com/apps/1250269/badge/2820550716/version.svg />      <img src=https://build.phonegap.com/apps/1250269/badge/2820550716.svg />      <img src=https://build.phonegap.com/apps/1250269/badge/2820550716/android.svg />
 
 An android app that helps you to read Suratul Mulk and Al Sajdah and learn more about the chapters.
